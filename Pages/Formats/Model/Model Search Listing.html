@@ -1,0 +1,128 @@
+<div class="page-search-bike">
+	<div class="row">
+		<div class="small-12 large-3 columns">
+			<h3>Select <strong>Your</strong> Bike</h3>
+		</div>
+		<div class="small-12 medium-4 large-2 columns">
+			$make_select$
+		</div>
+		<div class="small-12 medium-4 large-3 columns">
+			$model_select$
+		</div>
+		<div class="small-12 medium-4 large-2 columns">
+			$year_select$
+		</div>
+
+		<div class="small-12 large-2 columns">
+			<button class="page-search-button" onclick="$model_search_onclick$">Search</button>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="row">
+	<div class="small-12 columns">
+		<h4 class="pasred text-shadow" style="font-weight:600;">
+		Search Tips
+		</h4>
+		<p class="text-justify">
+			You can use the <b>search box</b> below to <b>filter your results</b>.<br>
+			If you were unsure what model your bike was, try typing the engine size or year such as <b>"600"</b> or <b>"2015"</b> or even <b>"600 2015"</b>.
+		</p>
+		<hr>
+	</div>
+</div>
+
+<!-- Model Search Listing Header -->
+<table id="fitment-table" class="fitment-loading" style="width:100%">
+	<thead>
+		<tr>
+			<th>Make</th>
+			<th>Model</th>
+			<th>Year</th>
+			<th class="hide-for-small">Code</th>
+			<th><span class="hide-for-small">View Parts</span></th>
+		</tr>
+	</thead>
+	<tbody>
+
+<!-- Model Search Listing Record -->
+<tr>
+	<td>$make_name$</td>
+	<td><a href="$model_link$">$model_name$</a></td>
+	<td>$model_year$</td>
+	<td class="hide-for-small">$model_code$</td>
+	<td><a href="$model_link$"><span class="hide-for-small">View Parts &nbsp;</span><i class="fa fa-arrow-circle-right"></i></a></td>
+</tr>
+
+<!-- Model Search Listing Footer	-->
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>Make</th>
+			<th>Model</th>
+			<th>Year</th>
+      <th class="hide-for-small">Code</th>
+			<th><span class="hide-for-small">View Model</span></th>
+		</tr>
+	</tfoot>
+</table>
+
+
+
+"sSearch": '<span style="width:30%">Quick "Wildcard" Search:</span>',
+
+<!-- Model Results Page Javascript Functions -->
+<script language="JavaScript" type="text/javascript">
+	$(document).ready(function() {
+		$('#fitment-table').dataTable( {
+			"lengthChange": false,
+			"fnPreDrawCallback": function() {
+				$('#fitment-table').addClass("fitment-loading");
+			},
+			"fnDrawCallback": function() {
+				$('#fitment-table').removeClass("fitment-loading");
+			},
+			"language": {
+				"search": '_INPUT_',
+				"searchPlaceholder": "Type anything here! Model name, CC's, year, etc...",
+				"infoFiltered": ""
+			},
+			"dom": '<"row quick-wildcard"<"small-12 medium-4 columns wildcard-text"><"small-12 medium-8 columns"f>>'+
+			't'+
+			'<"row"<"small-6 columns"ir><"small-6 columns"p>>',
+			"renderer": 'foundation'
+		});
+		$("div.wildcard-text").html('<h4>Quick <strong>Wildcard</strong> Search</h4>');
+	});
+	TOTECS.retail.loader.loadFunction(
+		function(){
+			/* Make Model search datatable */
+			var initDataTable = function(type, args, me){
+				$('#fitment-table').dataTable( {
+					"lengthChange": false,
+					"fnPreDrawCallback": function() {
+						$('#fitment-table').addClass("fitment-loading");
+					},
+					"fnDrawCallback": function() {
+						$('#fitment-table').removeClass("fitment-loading");
+					},
+					"language": {
+						"search": '_INPUT_',
+						"searchPlaceholder": "Type anything here! Model name, CC's, year, etc...",
+						"infoFiltered": ""
+					},
+					"dom": '<"row quick-wildcard"<"small-12 medium-4 columns wildcard-text"><"small-12 medium-8 columns"f>>'+
+					't'+
+					'<"row"<"small-6 columns"ir><"small-6 columns"p>>',
+					"renderer": 'foundation'
+				});
+				$("div.wildcard-text").html('<h4>Quick <strong>Wildcard</strong> Search</h4>');
+				TOTECS.retail.fs.removeAreaEventListener(4);
+			};
+			/* Make Model search datatable */
+			TOTECS.retail.fs.addAreaEventListener(8939, TOTECS.retail.fs.WEBPAGE_AREA_EVENT_TYPES.AFTER_AREA_RELOAD, initDataTable, 4, '');
+		}
+	);
+</script>

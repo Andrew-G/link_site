@@ -1,0 +1,67 @@
+</table>
+<!-- Header -->
+
+
+<!-- Basket Product Record -->
+<li class="user-info-item">
+	<div class="row collapse">
+		<div class="small-12 columns">
+			<small>$_B_Name$</small>
+		</div>
+	</div>
+	<div class="row collapse postfix-radius">
+		<div class="small-2 columns">
+			<label>&nbsp;
+				<span class="prefix user-info-bsk-img">$basketProduct_image$</span>
+			</label>
+		</div>
+		<div class="small-6 columns">
+			<label>Part #
+				<input type="text" value="$_B_ItemID$" readonly style="background-color: #FFFFFF!important;">
+			</label>
+		</div>
+		<div class="small-2 columns">
+			<label>Qty
+				<input type="text" onchange="$updateProduct_onchange$" value="$_B_Quantity$">
+			</label>
+		</div>
+		<div class="small-2 columns">
+			<label>&nbsp;
+				<span class="postfix" onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></span>
+			</label>
+		</div>
+	</div>
+</li>
+
+<!-- Basket Products Footer -->
+<table style="display:none;">
+
+
+
+
+
+
+
+<!-- Header -->
+<tr class="row">
+	<td style="padding: 0;" colspan="4" class="small-12 columns">You have $cart_view_TotalItem_Integer$ items in your wishlist.</td>
+</tr>
+<tr class="row">
+	<td style="padding: 0;" class="small-2 columns">&nbsp;</td>
+	<td style="padding: 0;" class="small-6 columns">Part #</td>
+	<td style="padding: 0;" class="small-2 columns">Qty</td>
+	<td style="padding: 0;" class="small-2 columns">&nbsp;</td>
+</tr>
+
+<!-- Basket Product Record -->
+<tr class="row">
+	<td style="padding: 0;" colspan="4" class="small-12 columns">$_B_Name$</td>
+</tr>
+<tr class="row">
+	<td style="padding: 0;" class="small-2 columns">$basketProduct_image$</td>
+	<td style="padding: 0;" class="small-6 columns">$_B_ItemID$</td>
+	<td style="padding: 0;" class="small-2 columns"><input type="text" onchange="$updateProduct_onchange$" value="$_B_Quantity$"></td>
+	<td style="padding: 0;" class="small-2 columns"><span onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></span></td>
+</tr>
+
+<!-- Basket Products Footer -->

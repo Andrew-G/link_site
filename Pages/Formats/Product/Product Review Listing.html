@@ -1,0 +1,57 @@
+<!--Header-->
+<span class="prode-data-placeholder"><h4 class="prode-header">Customer Reviews &nbsp;<i class="fa fa-comments-o"></i></h4></span>
+Rating<br>
+$product_review_rating_average_image$ <span style="font-size:80%;color:#555555;">overall / $product_review_rating_total$ reviews</span>
+
+<!--Record OLD -->
+<p style="margin:0;"><b style="font-size:140%">&#8220;</b><span style="font-size:120%">$product_review_summary$</span><b style="font-size:140%">&#8221;</b> - <i>$product_review_user$</i> on $product_review_date$</p>
+$product_review_rating_image$
+<p><i>$product_review_description$</i></p>
+
+<!-- Record -->
+<div style="margin: 2rem 0 0 0;">
+	<span style="font-size:120%">$product_review_summary$</span>
+	<span style="display:none;" class="review-record-$product_review_rating$ review-check green"> &nbsp;<i class="fa fa-check"></i></span>
+	<span style="display:none;" class="review-record-$product_review_rating$ review-cross pasred"> &nbsp;<i class="fa fa-times"></i></span>
+	<br>
+	$product_review_rating_image$ &nbsp;<span style="color:#555;">$product_review_date$ - $product_review_user$ &nbsp;<i class="fa fa-user"></i></span><br>
+	<blockquote>$product_review_description$</blockquote>
+</div>
+
+<!--Criterion Record-->
+<tr>
+		<td align="left">
+			$product_review_criterion$ :
+		</td>
+		<td align="left">
+			$product_review_rating_image$  $product_review_critique$ 
+		</td>
+	</tr>
+	
+<!--Footer-->
+<style type="text/css">
+	.rating_of_1, .rating_of_2, .rating_of_3, .rating_of_4, .rating_of_5 {
+		display: inline-block!important;
+	}
+	.review-record-0.review-cross, .review-record-1.review-cross, .review-record-2.review-cross, .review-record-3.review-check, .review-record-4.review-check, .review-record-5.review-check {
+		display: inline!important;
+	}
+</style>
+
+
+<!--Product review form-->
+<div class="row">
+	<div class="large-12 columns">
+		<form>
+			<fieldset style="background:#FFF;">
+				<h4>Submit Review</h4>
+				<label>Rating <br>$product_review_rating$</label>
+				<label style="margin-top:15px;">Would you recommend this product? $product_review_recommended$</label>
+				<label>Title of your review $product_review_summary$</label>
+				<label>Your review $product_review_description$</label>
+				<label id="$notifcation_container_id$" class="$notifcation_container_class$">Please complete the following fields <br>$missing_fields_list$</label>
+				<center><button class="small button" onclick="$product_review_onclick$"><i style="color:#D12828;" class="fa fa-pencil-square"></i>&nbsp; SUBMIT</button></center>
+			</fieldset>
+		</form>
+	</div>
+</div>

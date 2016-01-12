@@ -2,3 +2,7 @@
 /css/*
 /bower_components/*
 /node_modules/*
+/data_imports/
+/img/
+/related_docs/
+/Plugins/

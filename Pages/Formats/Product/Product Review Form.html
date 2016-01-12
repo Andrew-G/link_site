@@ -1,0 +1,54 @@
+<!--Product review form-->
+<div class="row">
+	<div class="large-12 columns">
+		<form>
+			<fieldset style="border:0;padding:0 0 15px 0;margin:0 0 15px 0;">
+				<span class="prode-data-placeholder"><h4 class="prode-header">Submit Review</h4></span>
+				<label>Rating <br>$product_review_rating$</label>
+				<label style="margin-top:15px;">Would you recommend this product? $product_review_recommended$</label>
+				<label>Title of your review $product_review_summary$</label>
+				<label>Your review $product_review_description$</label>
+				<label id="$notifcation_container_id$" class="$notifcation_container_class$">Please complete the following fields <br>$missing_fields_list$</label>
+				<center><button class="small button" onclick="$product_review_onclick$"><i style="color:#D12828;" class="fa fa-pencil-square"></i>&nbsp; SUBMIT</button></center>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+<style>
+.mandatory_field {
+	display: none;
+}
+</style>
+
+
+<!--Product review form criterion record-->
+<tr>
+		<td valign="top" style="padding-top:.3em">
+			$product_review_criterion$:
+		</td> 
+		<td>
+			<div style="padding-top: 0.3em;">$product_review_rating$</div>
+			$product_review_critique$
+		</td>
+	</tr>
+	
+<!--Product review guest user form-->
+<div class="row">
+	<div class="large-12 columns">
+		<form>
+			<fieldset style="border:0;padding:0 0 15px 0;margin:0 0 15px 0;">
+				<span class="prode-data-placeholder"><h4 class="prode-header">Submit Review</h4></span>
+				<label>To submit a review, you must be <a href="http://linkint.prod.xsqit.com/LNK-Login.html">logged in</a>.</label>
+			</fieldset>
+		</form>
+	</div>
+</div>
+
+
+<!--Product review post email-->
+A new review has been submitted by $user_name$ on $review_date$.<br>
+Product: $product_code$<br>
+Stars: $review_rating$<br>
+Summary: $review_summary$<br>
+Description: $review_description$

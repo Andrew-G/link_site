@@ -1,0 +1,64 @@
+<!-- MoPro Header -->
+<div data-alert class="alert-box secondary radius">
+  <i class="fa fa-info-circle"></i> &nbsp;Click a category below to check out some of the great products available for this bike!
+  <a href="#" class="close">&times;</a>
+</div>
+<dl class="accordion" data-accordion>
+	<dd style="display:none;">
+		<div>
+			<table>
+
+<!-- MoPro Parent Category -->
+			</table>
+		</div>
+	</dd>
+	<dd class="accordion-navigation model-product-accordion">
+		<a class="model-product-pnl" href="#$cat_id$-panel"><span class="plus"><i class="fa fa-plus-square"></i></span><span class="minus"><i class="fa fa-minus-square"></i></span> &nbsp;<span class="pnl-lbl">$cat_id$</span></a>
+		<div id="$cat_id$-panel" class="content">
+			<table style="display:none;">
+
+<!-- MoPro Category Search Record -->
+			</table>
+			<table style="width:100%">
+				<tr class="mopro-pnl-title">
+					<th class="mopro-pnl-desk" colspan="6">$cat_id$</th>
+					<th class="mopro-pnl-mob">$cat_id$</th>
+				</tr>
+
+<!-- MoPro Product Search Record -->
+<!-- Here we set the value of the addProductQuantityField to 1 so that we can add the product to our wishlist.-->
+\$('#quantityINP_$_P_ItemID$$webarea_id$').val('1');
+<!--old view link replaced w/ stock level-->
+<td class="mopro-view-link"><a href="$item_link$">View &nbsp;<i class="fa fa-arrow-circle-right"></i></a></td>
+
+<!-- MoPro Product Search Record -->
+<tr class="mopro-product-row">
+	<td class="mopro-product-img"><a href="$item_link$"><img alt="$_P_Image_Description$" title="$_P_Image_Description$" src="http://attachments.linkint.com.au/products/images_thumbnail/$_P_Image$"></a></td>
+	<td class="mopro-product-title">$_P_Name$</td>
+	<td class="mopro-product-code"><a href="$item_link$">$_P_ItemID$</a></td>
+	<td class="mopro-product-rrp"><strong><span class="show-for-small">RRP: </span>$SES_locale_currency_symbol$$_P_RRPriceInc$</strong></td>
+	<td class="mopro-view-link prode-stock-$_P_StockLevel$ centered">
+		<span class="show-for-small-only">Stock </span>
+		<span class="prode-stock-text-high" title="In stock."><i class="fa fa-check-circle"></i></span>
+		<span class="prode-stock-text-low" title="Stock is running low."><i class="fa fa-check-circle"></i></span>
+		<span class="prode-stock-text-none" title="Contact us to find out next stock availability."><i class="fa fa-times-circle"></i></span>
+	</td>
+	<td class="mopro-add-cart"><span style="display:none;">$addProductQuantityField$</span><a href="#" onclick="\$('#quantityINP_$_P_ItemID$$webarea_id$').val('1');$addProduct_onclick$">Add &nbsp;<i class="fa fa-plus-square"></i></a></td>
+</tr>
+
+
+	
+<!-- MoPro Footer -->
+			</table>
+		</div>
+	</dd>
+</dl>
+<!--Creates white space at the bottom when in mobile-->
+<div class="hide-for-medium-up">
+	<p>&nbsp;</p>
+</div>
+<style>
+	.MoProQty input {
+		display: inline-block;
+	}
+</style>

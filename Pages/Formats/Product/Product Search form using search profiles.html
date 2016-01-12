@@ -1,0 +1,58 @@
+<div id="partssearchform" class="page-search-bike page-search-products hide-home">
+	<div class="row">
+		<div class="small-12 medium-12 large-3 columns">
+			<h3 class="hide-for-small">Find <strong>Your</strong> Parts</h3>
+			<span class="show-for-small-only">
+				<a href="#" onclick="showPartsSearch()" style="display: inline!important;">
+					<h3>Find <strong>Your</strong> Parts &nbsp;<i class="fa fa-plus-square parts-search-icon"></i></h3>
+				</a>
+			</span>
+		</div>
+		
+		<!-- This is display: none because it's an unncessary yet mandatory element -->
+		<div style="display: none;">$searchTypeSelect$</div>
+		
+		<div class="small-12 medium-9 large-7 columns parts-search-hide">
+			$searchFields$
+		</div>
+
+		<div class="small-12 medium-3 large-2 columns parts-search-hide">
+			<button class="page-search-button" onclick="$advsearch_onclick$">Search</button>
+		</div>
+		
+	</div>
+</div>
+
+<script type="text/javascript">
+	function showPartsSearch() {
+		\$(".parts-search-hide").toggleClass( "search-show" );
+		\$(".parts-search-icon").toggleClass( "fa-plus-square fa-minus-square" );
+	}
+</script>
+
+
+
+
+<!-- The reason I have this different format for the home page specifically is because we don't want the parts and make/model search to be minimised in mobi, on the home page. On all other pages in mobi we want it minimised though so that you can see below the fold.
+So on the homepage under the $slider$ area, you will see a product search form and a model search form. These areas are using this format.
+-->
+
+<!--HOME Parts Search-->
+<div id="partssearchform" class="page-search-bike page-search-products">
+	<div class="row">
+		<div class="small-12 medium-12 large-3 columns">
+			<h3>Find <strong>Your</strong> Parts</h3>
+		</div>
+		
+		<div style="display: none;">$searchTypeSelect$</div>
+		
+		<div class="small-12 medium-9 large-7 columns">
+			$searchFields$
+		</div>
+
+		<div class="small-12 medium-3 large-2 columns">
+			<button class="page-search-button" onclick="$advsearch_onclick$">Search</button>
+		</div>
+		
+	</div>
+</div>

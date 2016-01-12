@@ -1,0 +1,124 @@
+<!-- Model Search Form -->
+<div class="page-search-bike hide-home">
+	<div class="row">
+		<div class="small-12 medium-12 large-3 columns">
+			<h3 class="hide-for-small">Select <strong>Your</strong> Bike</h3>
+			<span class="show-for-small-only">
+				<a href="#" onclick="showModelSearch()" style="display: inline!important;">
+					<h3>Select <strong>Your</strong> Bike &nbsp;<i class="fa fa-plus-square model-search-icon"></i></h3>
+				</a>
+			</span>
+		</div>
+		<div class="small-4 medium-3 large-2 columns model-search-hide">
+			$make_select$
+		</div>
+		<div class="small-4 medium-3 large-3 columns model-search-hide">
+			$model_select$
+		</div>
+		<div class="small-4 medium-3 large-2 columns model-search-hide">
+			$year_select$
+		</div>
+
+		<div class="small-12 medium-3 large-2 columns model-search-hide">
+			<button class="page-search-button" onclick="$model_search_onclick$">Search</button>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function showModelSearch() {
+		\$(".model-search-hide").toggleClass( "search-show" );
+		\$(".model-search-icon").toggleClass( "fa-plus-square fa-minus-square" );
+	}
+</script>
+
+
+<!-- The reason I have this different format for the home page specifically is because we don't want the parts and make/model search to be minimised in mobi, on the home page. On all other pages in mobi we want it minimised so that you can see below the fold -->
+
+<!-- HOME Model Search Form -->
+<div class="page-search-bike model-search-form" style="margin-bottom:2rem;">
+	<div class="row">
+		<div class="small-12 medium-12 large-3 columns">
+			<h3>Select <strong>Your</strong> Bike</h3>
+		</div>
+		<div class="small-4 medium-3 large-2 columns make-search-element">
+			$make_select$
+		</div>
+		<div class="small-4 medium-3 large-3 columns">
+			$model_select$
+		</div>
+		<div class="small-4 medium-3 large-2 columns">
+			$year_select$
+		</div>
+
+		<div class="small-12 medium-3 large-2 columns">
+			<button class="page-search-button" onclick="\$('.dat-loader').toggle(); $model_search_onclick$"><span class="dat-loader">Search</span><span style="display:none;" class="dat-loader">Loading..</span></button>
+		</div>
+		
+		<div class="small-12 columns model-search-tip" style="display:none;">
+			<h5 class="white text-center ultra-text-shadow" style="margin:0;padding:1rem;">Unsure of your model or year? Just click <strong>Search</strong>.</h5>
+		</div>
+	</div>
+</div>
+
+<style type="text/css">
+	.hide-home { display: none!important;}
+</style>
+
+<!-- THIS IS IN JS FUNCTIONS AREA ON HOMEPAGE -->
+<script type="text/javascript">
+	$('.make-search-element > select' ).bind('change', function() {
+		$('.model-search-tip').slideDown();
+		$('.model-search-form').addClass('model-search-form-active');
+	});
+</script>
+
+
+<div class="grey3-bg">
+	<div class="row">
+		<div class="small-12 columns">
+			<p class="white text-center text-shadow" style="margin:0;padding:1rem;">Having trouble finding your bike? &nbsp;&nbsp;<a style="font-weight: bold;" class="ultra-text-shadow" href="#">Check out our search tips &nbsp;<i class="fa fa-youtube-play"></i></a></p>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="small-12 columns">
+		<h4 class="pasred text-shadow" style="font-weight:600;">
+		Search Tips
+		</h4>
+		<p class="text-justify">
+			To find parts for <b>your bike</b>, simply choose your <b>make</b> and <b>model</b> from the boxes above.<br>
+			If you are unsure of the exact <b>model</b> of your bike, choose a <b>make</b> and just click <b>search</b>.
+		</p>
+		<hr>
+	</div>
+</div>
+
+<script language="JavaScript" type="text/javascript">
+	$(document).ready(function() {
+		$('#fitment-table').dataTable( {
+			"lengthChange": false,
+			"fnPreDrawCallback": function() {
+				$('#fitment-table').addClass("fitment-loading");
+			},
+			"fnDrawCallback": function() {
+				$('#fitment-table').removeClass("fitment-loading");
+			},
+			"language": {
+				"search": '_INPUT_',
+				"searchPlaceholder": "Type anything here! Model name, CC's, year, etc...",
+				"infoFiltered": ""
+			},
+			"dom": '<"row quick-wildcard"<"small-12 medium-4 columns wildcard-text"><"small-12 medium-8 columns"f>>'+
+			't'+
+			'<"row"<"small-6 columns"ir><"small-6 columns"p>>',
+			"renderer": 'foundation'
+		});
+		$("div.wildcard-text").html('<h4>Quick <strong>Wildcard</strong> Search</h4>');
+	});
+$.fn.dataTable.ext.order['dom-select'] = function (settings, col) {
+	return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+		console.log($('select', td).val(););
+	});
+};

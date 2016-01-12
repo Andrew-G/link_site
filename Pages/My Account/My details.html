@@ -1,0 +1,147 @@
+<h4>My Contact Details</h4>
+<hr>
+
+<form>					
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<label>User Contact</label>
+			$userContactField$
+		</div>
+		<div class="small-12 medium-6 columns">
+			<label>User Email</label>
+			$userEmailField$
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 large-centered columns">
+			<input type="submit" class="button expand" value="Update details" onclick="$userUpdate_onclick$" href="javascript:void(0);"/>
+		</div>
+	</div>
+</form>
+
+<p>&nbsp;</p>
+
+<span id="$addressnew_element_id$" style="display:none;">
+	<h4>New Address</h4>
+	<hr>
+
+	<form class="add-new-address">
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+				<label>New Address Description (home, work, etc)</label>
+				$addressnewDescriptionField$
+			</div>
+			<div class="small-12 medium-6 columns">
+				<label>Contact Name</label>
+				$addressnewContactField$
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+				<label>Street</label>
+				$addressnewLine1Field$
+			</div>
+			<div class="small-12 medium-6 columns">
+				<label>Suburb</label>
+				$addressnewLine2Field$
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+				<label>State</label>
+				$addressnewLine3Field$
+			</div>
+			<div class="small-12 medium-6 columns">
+				<label>Postcode</label>
+				$addressnewPostcodeField$
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+				<label>Country</label>
+				$addressnewCountry$
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-6 columns">
+				<label>Phone</label>
+				$addressnewPhoneField$
+			</div>
+			<div class="small-12 medium-6 columns">
+				<label>Fax</label>
+				$addressnewFaxField$
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 large-centered columns">
+				<input type="submit" class="button expand" value="Add New Address" onclick="$addressnew_submit_onclick$" href="javascript:void(0);"/>
+			</div>
+		</div>
+	</form>
+	<p>&nbsp;</p>
+</span>
+
+<h4>My Address</h4>
+<hr>
+
+<form>					
+	<div class="row">
+		<div class="small-9 medium-10 columns">
+			<label>Select address (No address? <a onclick="$addressnew_toggleform_onclick$" href="javascript: void(0);">Add a new address</a>)</label>
+			$addressSelect$
+		</div>
+		<div class="small-3 medium-2 columns">
+			<button type="submit" class="button expand" onclick="$deleteAddress_onclick$" href="javascript:void(0);"/><i class="fa fa-trash-o"></i></button>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<label>Address Description</label>
+			$addressDescriptionField$
+		</div>
+		<div class="small-12 medium-6 columns">
+			<label>Contact Name</label>
+			$addressContactField$
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<label>Street</label>
+			$addressLine1Field$
+		</div>
+		<div class="small-12 medium-6 columns">
+			<label>Suburb</label>
+			$addressLine2Field$
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<label>State</label>
+			$addressLine3Field$
+		</div>
+		<div class="small-12 medium-6 columns">
+			<label>Postcode</label>
+			$addressPostcodeField$
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<label>Phone</label>
+			$addressPhonenoField$
+		</div>
+		<div class="small-12 medium-6 columns">
+			<label>Fax</label>
+			$addressFaxnoField$
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<input type="submit" class="button expand" value="Update Address" onclick="$addressUpdate_onclick$" href="javascript:void(0);"/>
+		</div>
+	</div>
+</form>
+<style>
+	.hide-logged-in {
+		display: none;
+	}
+</style>

@@ -1,0 +1,200 @@
+<!--Login-->
+<div class="small-12 columns">
+	<div class="login-box" style="padding: 20px 0;">
+		<div class="row">
+			<div class="small-12 medium-6 medium-offset-3 columns">
+				<form>
+					<div class="row">
+						<div class="small-12 columns">
+							<h2>Login</h2>
+							<label style="color:#F00;">$login_failure_error_message$</label>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<label>Username/Account Number</label>
+							$userField$
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 columns">
+							<label>Password</label>
+							$passwordField$
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 large-centered columns">
+							<input type="submit" class="button expand" value="Log In" onclick="$login_onclick$"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 medium-6 medium-offset-3 columns">
+				<hr>
+				<p style="text-align:center;">Forgot your password? Call us on  <span class="pasred">61-7-3382 5000</span></p>
+				<hr>
+				<p style="text-align:center;">Need an account? <a href="http://linkint.prod.xsqit.com/LNK-register.html">Register here.</a></p>
+				<hr>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<!--Logout-->
+<div class="small-12 large-centered columns">
+	<div class="login-box" style="padding: 20px 0;">
+		<div class="row">
+			<div class="small-12 medium-6 medium-offset-3 columns">
+				<form>
+					<div class="row">
+						<div class="small-12 columns">
+							<h2>Login</h2>
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 large-centered columns">
+							<p>You are logged in as $login_id$.</p>
+							<a class="button expand pasred-bg" href="http://linkint.prod.xsqit.com/LNK-my-account.html">View my account <i class="fa fa-chevron-circle-right"></i></a>
+							<input type="submit" class="button expand" value="Log Out" onclick="$logout_onclick$"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--Registration-->
+<div class="small-12 columns">
+	<div class="registration-box" style="padding: 20px 0;">
+		<div class="row">
+			<div class="small-12 columns">
+				<h2>Registration</h2>
+				<p>Already signed up? <a href="http://linkint.prod.xsqit.com/LNK-login.html">Go to Login</a>.</p>
+				<p>Registering is easy and has many benefits:</p>
+				<ul class="fa-ul">
+					<li><i class="fa-li fa fa-check green"></i> View our <a href="http://linkint.prod.xsqit.com/LNK-products.html">product range</a></li>
+					<li><i class="fa-li fa fa-check green"></i> Find parts <a href="http://linkint.prod.xsqit.com/LNK-home.html">available for your bike</a></li>
+					<li><i class="fa-li fa fa-check green"></i> Add products to <a href="http://linkint.prod.xsqit.com/LNK-wishlist.html">your wishlist</a></li>
+					<li><i class="fa-li fa fa-check green"></i> Take your wishlist to your <a href="http://linkint.prod.xsqit.com/LNK-dealers.html">local dealership</a> for easy ordering</li>
+<!--					<li><i class="fa-li fa fa-check"></i> As well as stay up to date with the latest <a href="http://linkint.prod.xsqit.com/LNK-news.html">product and racing news</a>, <a href="http://linkint.prod.xsqit.com/LNK-dealers.html">store locations</a>, and much more</li>-->
+				</ul>
+			</div>
+		</div>
+		<div class="row">
+			<div class="small-12 columns">
+				<form>					
+					<div class="row">
+						<div class="small-12 columns">
+							<h5>Contact details:</h5>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 medium-6 columns">
+							<label>First name</label>
+							$name1$
+						</div>
+<!--					</div>-->
+<!--					<div class="row">-->
+						<div class="small-12 medium-6 columns">
+							<label>Surname</label>
+							$name3$
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 medium-6 columns">
+							<label>Display name</label>
+							$display_name$
+						</div>
+<!--					</div>-->
+<!--					<div class="row">-->
+						<div class="small-12 medium-6 columns">
+							<label>Postcode</label>
+							$postcode$
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 columns">
+							<h5>Login details:</h5>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 medium-6 columns">
+							<label>Email</label>
+							$login$
+							$accountField$
+						</div>
+<!--					</div>-->
+<!--					<div class="row">-->
+						<div class="small-12 medium-6 columns">
+							<label>Confirm email</label>
+							$email$
+						</div>
+					</div>
+					<div class="row">
+						<div class="small-12 medium-6 columns">
+							<label>Password</label>
+							$set_password$
+						</div>
+<!--					</div>-->
+<!--					<div class="row">-->
+						<div class="small-12 medium-6 columns">
+							<label>Confirm password</label>
+							$check_password$
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 columns">
+							<h5>Terms &amp; Conditions</h5>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 columns">
+<!--							<label>Terms &amp; Conditions</label>-->
+							<small>$termsagree$</small><br />
+							$receive_marketing$ <small>I would like to receive information about competitions and products</small>
+						</div>
+					</div>
+					
+					<div class="row">
+						<div class="small-12 large-centered columns">
+<!--							<input type="submit" class="button expand" value="Register" onclick="javascript:_Register('9861');"/>-->
+							$submitbutton$
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+//$(document).on('keyup', 'input[name=login], input[name=email]', function() {
+//  $('input[name=login], input[name=email]').not(this).val(this.value);
+//})
+$(document).on('keyup', 'input[name=name1]', function() {
+  $('input[name=name1], input[name=displayname]').not(this).val(this.value);
+})
+</script>
+
+
+<!--Registration Success-->
+<div class="small-12 columns">
+	<div class="registration-box" style="padding: 20px 0;">
+		<div class="row">
+			<div class="small-12 columns">
+				<h2>Registration successful</h2>
+				<p>Thanks for registering with us <strong>$name1$</strong>!</p>
+				<p>We have sent an email to <strong>$email$</strong> that contains your account username and password, you can use these details to login.</p>
+			</div>
+		</div>
+	</div>
+</div>

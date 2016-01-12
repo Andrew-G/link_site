@@ -1,0 +1,124 @@
+<h2 class="product-page-logo">
+	<hr class="show-for-small-only">
+	<img alt="" src="http://linkint.prod.xsqit.com/libraries/images/product-logos/rksprockets-800.png" />
+</h2>
+
+<h2>Gearing Ratios</h2>
+
+<h4>The effects of changing sprocket teeth size</h4>
+
+<h5>Front</h5>
+
+<div class="row">
+	<div class="small-12  columns">
+		<p>Fitting a <strong>FRONT</strong> sprocket with a <strong>LESSER</strong> number of teeth than original fitment by the motorcycle manufacturer may have the effect of lower overall gearing ratios:</p>
+		<ul class="disc">
+			<li>Increased acceleration</li>
+			<li>Reduced maximum speed</li>
+			<li>Increased motor RPM at a given speed</li>
+		</ul>
+	</div>
+	
+	<div class="small-12 columns">
+		<p>Fitting a <strong>FRONT</strong> sprocket with a <strong>GREATER</strong> number of teeth than original fitment by the motorcycle manufacturer may have the effect of higher overall gearing ratios:</p>
+		<ul class="disc">
+			<li>Decreased acceleration</li>
+			<li>Increase in maximum speed</li>
+			<li>Decreased motor RPM at a given speed</li>
+		</ul>
+	</div>
+</div>
+
+<h5>Rear</h5>
+
+<div class="row">
+	<div class="small-12 columns">
+		<p>Fitting a <strong>REAR</strong> sprocket with a <strong>LESSER</strong> number of teeth than original fitment by the motorcycle manufacturer may have the effect of higher overall gearing ratios:</p>
+		<ul class="disc">
+			<li>Decreased acceleration</li>
+			<li>Increased maximum speed</li>
+			<li>Decreased motor RPM at a given speed</li>
+		</ul>
+	</div>
+	
+	<div class="small-12 columns">
+		<p>Fitting a <strong>REAR</strong> sprocket with a <strong>GREATER</strong> number of teeth than original fitment by the motorcycle manufacturer may have the effect of lower overall gearing ratios:</p>
+		<ul class="disc">
+			<li>Increased acceleration</li>
+			<li>Decrease in maximum speed</li>
+			<li>Increased motor RPM at a given speed</li>
+		</ul>
+	</div>
+</div>
+
+<div class="row">
+	<div class="small-12 columns">
+		<h4>Gearing Ratio Calculator</h4>
+		<p>For good wear life try dividing the rear by the front and look for varying numbers after the decimal point.</p>
+		<p>A <strong>whole number</strong> or one that has <strong>lots of repetitive numbers</strong> create higher chain and sprocket wear.</p>
+		<div data-alert class="alert-box secondary">
+			Try calculating your gearing ratio below!
+			<a href="#" class="close">&times;</a>
+		</div>
+	</div>
+</div>
+<div class="row">
+	<div class="small-6 medium-4 columns">
+		<label>Front Sprocket
+			<select id="calc-front-sprocket" onchange="calcSprocket()">
+				<option value="11">11</option>
+				<option value="12">12</option>
+				<option value="13">13</option>
+				<option value="14">14</option>
+				<option value="15">15</option>
+				<option value="16">16</option>
+				<option value="17">17</option>
+				<option value="18">18</option>
+				<option value="19">19</option>
+			</select>
+		</label>
+	</div>
+	<div class="small-6 medium-4 columns">
+		<label>Rear Sprocket
+			<select id="calc-rear-sprocket" onchange="calcSprocket()">
+				<option value="32">32</option>
+				<option value="33">33</option>
+				<option value="34">34</option>
+				<option value="35">35</option>
+				<option value="36">36</option>
+				<option value="37">37</option>
+				<option value="38">38</option>
+				<option value="39">39</option>
+				<option value="40">40</option>
+				<option value="41">41</option>
+				<option value="42">42</option>
+				<option value="43">43</option>
+				<option value="44">44</option>
+				<option value="45">45</option>
+				<option value="46">46</option>
+				<option value="47">47</option>
+				<option value="48">48</option>
+				<option value="49">49</option>
+				<option value="50">50</option>
+				<option value="51">51</option>
+				<option value="52">52</option>
+				<option value="53">53</option>
+				<option value="54">54</option>
+				<option value="55">55</option>
+				<option value="56">56</option>
+			</select>
+		</label>
+	</div>
+	<div class="small-12 medium-4 columns">
+		<label>Ratio
+			<input type="text" id="calc-sprocket-result" name="calc-sprocket" value="2.91" readonly>
+		</label>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function calcSprocket() {
+		var ratio = ($("#calc-rear-sprocket").val() / $("#calc-front-sprocket").val())
+		$("#calc-sprocket-result").val(parseFloat(ratio.toFixed(6)));
+	}
+</script>

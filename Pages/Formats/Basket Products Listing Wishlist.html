@@ -1,0 +1,76 @@
+<!--We give the table the model-product-accordion class so that it can borrow all the styling for the product listing-->
+
+
+<!--LNK - Basket header-->
+<p>You have $cart_view_TotalItem_Integer$ parts in your wishlist.</p>
+<p>
+	<i class="fa fa-print"></i> &nbsp;<a href="http://linkint.prod.xsqit.com/LNK-wishlist-print.html">Print wishlist</a><br>
+	<i class="fa fa-trash-o"></i> &nbsp;<a href="#" onclick="$clear_basket_products_onclick$">Clear wishlist</a>
+</p>
+<table class="accordion-navigation model-product-accordion" style="width:100%">
+	<thead class="hide-for-small">
+		<tr>
+			<th colspan="2">Item</th>
+			<th>Code</th>
+			<th>QTY</th>
+			<th style="text-align:center"><i class="fa fa-trash-o"></i></th>
+		</tr>
+	</thead>
+	<tbody>
+
+<!--LNK - Basket product-->
+<tr class="mopro-product-row">
+	<td class="mopro-product-img"><a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$basketProduct_image$</a></td>
+	<td class="mopro-product-title">$_B_Description1$</td>
+	<td class="mopro-product-code"><a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$_B_ItemID$</a></td>
+	<td class="mopro-view-link" style="text-align:center"><h4><a class="" href="#" onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></a></h4></td>
+</tr>
+
+<!--LNK - Basket footer-->
+	</tbody>
+</table>
+<p><small>The prices shown in the search results are recommended retail only. Actual pricing may vary depending on freight, dealers and location.</small></p>
+
+
+
+<!--PRINT BASKET-->
+<!--LNK - Print basket header-->
+<p style="margin-bottom:5px;margin-top:5px;">Name:<br>
+Mobile:</p>
+<span class="accordion-navigation model-product-accordion">
+	<span class="model-product-pnl">
+		<table class="accordion-navigation model-product-accordion" style="width:100%">
+			<thead class="hide-for-small">
+				<tr>
+					<th colspan="2">Item</th>
+					<th>Code</th>
+					<th>QTY</th>
+				</tr>
+			</thead>
+			<tbody>
+
+<!--LNK - Print basket record-->
+<tr class="mopro-product-row">
+	<td class="mopro-product-img">$basketProduct_image$</td>
+	<td class="mopro-product-title">$_B_Description1$</td>
+	<td class="mopro-product-code" style="white-space:nowrap;">$_B_ItemID$</td>
+	<td class="mopro-add-cart">____</td>
+</tr>
+
+
+
+
+
+<!--DEPRECATED-->
+<td class="mopro-add-cart"><input style="width: 2.5rem;text-align: center;margin-bottom:0px;" type="text" value="$_B_Quantity$" onchange="$updateProduct_onchange$" onkeypress="$updateProduct_onkeypress$"/></td>		
+
+<!-- Header -->
+<tr class="row">
+	<td style="padding: 0;" colspan="4" class="small-12 columns">You have $cart_view_TotalItem_Integer$ items in your wishlist.</td>
+</tr>
+<tr class="row">
+	<td style="padding: 0;" class="small-2 columns">&nbsp;</td>
+	<td style="padding: 0;" class="small-6 columns">Part #</td>
+	<td style="padding: 0;" class="small-2 columns">Qty</td>
+	<td style="padding: 0;" class="small-2 columns">&nbsp;</td>
+</tr>

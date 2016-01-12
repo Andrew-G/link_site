@@ -1,0 +1,105 @@
+<!-- Wishlist -->
+<section id="about">
+	<div class="row">
+		<div class="small-12 columns">
+			<h2>My Wishlist</h2>
+		</div>
+
+		<div class="large-12 columns hide-for-small">
+			<p>&nbsp;</p>
+		</div>
+	</div>
+</section>
+
+
+
+
+
+
+<!-- Basket Product Record -->
+<tr class="row">
+	<td style="padding: 0;" colspan="4" class="small-12 columns">$_B_Name$</td>
+</tr>
+<tr class="row">
+	<td style="padding: 0;" class="small-2 columns">$basketProduct_image$</td>
+	<td style="padding: 0;" class="small-6 columns">$_B_ItemID$</td>
+	<td style="padding: 0;" class="small-2 columns"><input type="text" onchange="$updateProduct_onchange$" value="$_B_Quantity$"></td>
+	<td style="padding: 0;" class="small-2 columns"><span onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></span></td>
+</tr>
+
+
+
+<p>You have $cart_view_TotalItem_Integer$ parts in your wishlist.</p>
+<p>
+	<i class="fa fa-print"></i> &nbsp;<a href="http://linkint.prod.xsqit.com/LNK-wishlist-print.html">Printer friendly wishlist</a><br>
+	<i class="fa fa-trash-o"></i> &nbsp;<a href="#" onclick="$clear_basket_products_onclick$">Clear wishlist</a>
+</p>
+<p>mate ya total is $SES_locale_currency_symbol$$cart_view_TotalInc_ProjectCurrency$</p>
+<span class="accordion-navigation model-product-accordion">
+	<span class="model-product-pnl">
+		<table style="width:100%">
+			<thead class="hide-for-small">
+				<tr>
+					<th colspan="2">Item</th>
+					<th>Code</th>
+					<th>QTY</th>
+					<th style="text-align:center"><i class="fa fa-trash-o"></i></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+	
+<tr class="mopro-product-row">
+	<td class="mopro-product-img"><a href="$viewProduct_link$">$basketProduct_image$</a></td>
+	<td class="mopro-product-title">$_B_Description1$</td>
+	<td class="mopro-product-code"><a href="$viewProduct_link$">$_B_ItemID$</a></td>
+	<td class="mopro-add-cart"><input style="width: 2.5rem;text-align: center;margin-bottom:0px;" type="text" value="$_B_Quantity$" onchange="$updateProduct_onchange$" onkeypress="$updateProduct_onkeypress$"/></td>		
+	<td class="mopro-view-link" style="text-align:center"><h4><a class="" href="#" onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></a></h4></td>
+</tr>
+		
+<!--Search Results Footer-->
+			</tbody>
+		</table>
+	</span>
+</span>
+
+
+
+
+
+
+
+<!--PRINT-->
+<p style="margin-bottom:5px;margin-top:5px;">Name:<br>
+Mobile:</p>
+<span class="accordion-navigation model-product-accordion">
+	<span class="model-product-pnl">
+		<table style="width:100%">
+			<thead>
+				<tr>
+					<th colspan="2">Item</th>
+					<th>Code</th>
+					<th>QTY</th>
+				</tr>
+			</thead>
+			<tbody>
+			
+
+<tr class="mopro-product-row">
+	<td class="mopro-product-img">$basketProduct_image$</td>
+	<td class="mopro-product-title">$_B_Description1$</td>
+	<td class="mopro-product-code" style="white-space:nowrap;">$_B_ItemID$</td>
+	<td class="mopro-add-cart">$_B_Quantity$</td>
+</tr>
+		
+<!--Search Results Footer-->
+			</tbody>
+			<tfoot>
+				<tr>
+					<th style="text-align:right;" colspan="4">Total</th>
+					<th>$SES_locale_currency_symbol$________</th>
+				</tr>
+			</tfoot>
+		</table>
+	</span>
+</span>

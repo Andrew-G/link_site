@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+		<title>Dealer Locator</title>
+		<link rel="shortcut icon" href="http://linkint.prod.xsqit.com/libraries/resources/website-elements/favicon.ico">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://linkint.prod.xsqit.com/libraries/resources/CSS/app.css" />
+		
+		<style type="text/css">
+			#locationSelect li a {
+				padding: 5px 0px;
+				border-top: 1px solid #ccc;
+			}
+			#locationSelect li a p {
+				font-size: 0.75rem;
+				line-height: 1rem;
+				margin-bottom: 5px;
+				
+			}
+			.left-off-canvas-menu {
+				background: #f7f7f7;
+			}
+		</style>
+	</head>
+	<body onload="load()">
+		<div class="main-wrapper">
+
+			<!-- Global Nav -->
+			<div class="contain-to-grid">
+				<div id="page-navigation">
+					<nav class="top-bar" data-topbar role="navigation">
+							<ul class="title-area">
+								<li class="name">
+									<a href="http://linkint.prod.xsqit.com/LNK-home.html"><img class="navbarlogo" src="http://linkint.prod.xsqit.com/libraries/images/website-elements/link-main-logo.png" /></a>
+								</li>
+								 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+							</ul>
+
+							<section class="top-bar-section">
+								<ul class="right goodfont">
+									<li><a href="http://linkint.prod.xsqit.com/LNK-home.html">Home</a></li>
+									<li class="has-dropdown">
+										<a href="#">About</a>
+										<ul class="dropdown">
+											<li><a href="http://linkint.prod.xsqit.com/LNK-about-us.html">About Us</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-company-history.html">Company History</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-distribution-network.html">Distribution Network</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-key-contacts.html">Key Contacts</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-careers.html">Careers</a></li>
+										</ul>
+									</li>
+									<!-- this is the products button for mobile size menu -->
+									<li class="show-for-small-only has-dropdown">
+										<a href="#">Products</a>
+										<ul class="dropdown">
+											<li><a href="http://linkint.prod.xsqit.com/LNK-ariete-accessories.html">Ariete Accessories</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-arrow-exhausts.html">Arrow Exhausts</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-bearing-worx.html">Bearing Worx</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-bmc-air-filters.html">BMC Air Filters</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-champion-oil-filters.html">Champion Oil Filters</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-cobra-exhausts.html">Cobra Exhausts</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-dynavolt-batteries.html">Dynavolt Batteries</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-ferodo-braking.html">Ferodo Braking</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-hiflofiltro-filters.html">HifloFiltro Filters</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-keiti-accessories.html">Keiti Accessories</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-la-corsa-accessories.html">La Corsa Accessories</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-motul-oils.html">Motul Oils</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-pirelli-tyres.html">Pirelli Tyres</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-polisport-plastics.html">Polisport Plastics</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-rk-chains.html">RK Chain</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-rk-sprockets.html">RK Sprockets</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-roadstar-batteries.html">Roadstar Batteries</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-states-mx-accessories.html">States MX Accessories</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-sxp-locks.html">SXP Locks</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-vee-rubber-tyres.html">Vee Rubber Tyres</a></li>
+											<li><a href="http://linkint.prod.xsqit.com/LNK-vortex-racing-products.html">Vortex Racing</a></li>
+										</ul>
+									</li>
+									<!-- This is the products button for the desktop size grid drop down -->
+									<li class="show-for-medium-up"><a href="#" onclick="$('#products-drop-down').slideToggle();">Products</a></li>
+									<li><a href="http://linkint.prod.xsqit.com/LNK-news.html">Media</a></li>
+									<li><a href="http://database.linkint.com.au/dealer-locator.html">Dealers</a></li>
+									<li><a href="http://linkint.prod.xsqit.com/LNK-contact-us.html">Contact</a></li>
+									<li class="show-for-small-only has-dropdown">
+										<a href="#">Social Media</a>
+										<ul class="dropdown">
+											<li><a href="https://www.facebook.com/Linkint.AUS/" target="_blank"><i class="fa fa-facebook-square"></i> &nbsp;Facebook - Link</a></li>
+											<li><a href="https://www.facebook.com/Pirelli.AUS/" target="_blank"><i class="fa fa-facebook-square"></i> &nbsp;Facebook - Pirelli</a></li>
+											<li><a href="https://www.facebook.com/MotulAU" target="_blank"><i class="fa fa-facebook-square"></i> &nbsp;Facebook - Motul</a></li>
+											<li><a href="https://www.instagram.com/link_international" target="_blank"><i class="fa fa-instagram"></i> &nbsp;Instagram - Link</a></li>
+											<li><a href="https://www.instagram.com/pirellimotoaus" target="_blank"><i class="fa fa-instagram"></i> &nbsp;Instagram - Pirelli</a></li>
+											<li><a href="https://www.instagram.com/motulaus" target="_blank"><i class="fa fa-instagram"></i> &nbsp;Instagram - Motul</a></li>
+											<li><a href="https://www.youtube.com/user/LinkintAUS" target="_blank"><i class="fa fa-youtube-square"></i> &nbsp;YouTube - Link</a></li>
+										</ul>
+									</li>
+									<li><a href="http://linkint.prod.xsqit.com/LNK-wishlist.html">Wishlist</a></li>
+									<li><a href="http://linkint.prod.xsqit.com/LNK-login.html">Login</a></li>
+								</ul>
+							</section>
+						</nav>
+				</div>
+			</div>
+			<div id="products-drop-down" class="products-logo-grid" style="display:none;">
+				<div class="row">
+					<div class="medium-12 columns">
+						<ul class="medium-block-grid-7">
+							<li><a href="http://linkint.prod.xsqit.com/LNK-ariete-accessories.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/ariete.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-arrow-exhausts.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/arrow.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-bearing-worx.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/bearing-worx.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-bmc-air-filters.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/bmc.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-champion-oil-filters.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/champion.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-cobra-exhausts.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/cobra.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-dynavolt-batteries.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/dynavolt.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-ferodo-braking.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/ferodo.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-hiflofiltro-filters.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/hiflo.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-keiti-accessories.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/Keiti.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-la-corsa-accessories.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/la-corsa.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-motul-oils.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/motul.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-pirelli-tyres.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/pirelli.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-polisport-plastics.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/polisport.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-rk-chains.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/rk-250.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-rk-sprockets.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/rksprockets-250.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-roadstar-batteries.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/roadstar.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-states-mx-accessories.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/states.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-sxp-locks.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/sxp.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-vee-rubber-tyres.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/veerubber.png"></a></li>
+							<li><a href="http://linkint.prod.xsqit.com/LNK-vortex-racing-products.html"><img alt="" src="http://linkint.prod.xsqit.com/libraries/images/brand-logos-250/vortex.png"></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<hr style="margin:0px!important;">
+
+			<form action="javascript:searchLocations()">
+				<div id="search-div" name="search-div" style="width:100%;padding-top:20px;background:#D12828;">
+					<div class="row">
+						<div class="small-12 medium-3 large-2 columns">
+							<h3 style="color:#FCFCFC;"><strong>Your</strong> Area</h3>
+						</div>
+						<div class="small-12 medium-4 large-5 columns">
+								<input type="text" name="addressInput" id="addressInput" placeholder="Postcode / Suburb / City" onSubmit="searchLocations()">
+						</div>
+						<div class="small-12 medium-3 large-3 columns">
+							<h3 style="color:#FCFCFC;">Search Within</h3>
+						</div>
+						<div class="small-12 medium-2 columns">
+							<select name="radiusSelect" id="radiusSelect">
+								<option value="5">5 km's</option>
+								<option value="10">10 km's</option>
+								<option value="15">15 km's</option>
+								<option value="25" selected="selected">25 km's</option>
+								<option value="50">50 km's</option>
+								<option value="100">100 km's</option>
+								<option value="250">250 km's</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="small-12 large-12 columns">
+							<button class="page-search-button width-100" onclick="searchLocations()">Find dealers</button>
+						</div>
+					</div>
+				</div>
+			</form>
+				
+			<div id="new-search-div" name="new-search-div" style="padding-top:20px;background:#D12828;display:none;" class="width-100">
+				<div class="row">
+					<div class="small-6 medium-6 columns">
+						<button class="small" style="width:100%;" onclick="$('.off-canvas-wrap').foundation('offcanvas', 'toggle', 'offcanvas-overlap');"><i class="fa fa-chevron-circle-left"></i> Results</button>
+					</div>
+					<div class="small-6 medium-6 columns">
+						<button class="small" style="width:100%;" onclick="showSearchDiv()">New search</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="off-canvas-wrap width-100" data-offcanvas>
+			<div class="inner-wrap">
+				<div name="map" id="map" class="width-100" style="min-height:300px;"></div>
+				<aside class="left-off-canvas-menu">
+					<div class="location-list">
+						<ul class="side-nav" name="locationSelect" id="locationSelect">
+							<li class="heading">Please enter a location</li>
+						</ul>
+					</div>
+				</aside>
+				<a class="exit-off-canvas" onclick="$('.off-canvas-wrap').foundation('offcanvas', 'hide', 'offcanvas-overlap');"></a>
+			</div>
+		</div>
+
+		<!-- SCRIPTS -->
+		<script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+		<script src="http://linkint.prod.xsqit.com/libraries/resources/JS/dealerlocator.js"></script>
+		<script language="JavaScript" type="text/javascript" src="http://www.linkint.com.au/libraries/resources/bower_components/jquery.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="http://www.linkint.com.au/libraries/resources/bower_components/foundation.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="http://www.linkint.com.au/libraries/resources/bower_components/modernizr.js"></script>
+		<script language="JavaScript" type="text/javascript" src="http://www.linkint.com.au/libraries/resources/Scripts/app.js"></script>
+		<style type="text/css">
+/*
+			.left-off-canvas-menu {
+				overflow-x: visible;
+				overflow-y: visible;
+				width: 14.625rem;
+			}
+*/
+			.location-list {
+				overflow-x: hidden;
+				overflow-y: scroll;
+				width: 100%;
+				height: 100%;
+				padding: 0.25rem;
+			}
+			.no-padding {
+				padding:0!important;
+			}
+		</style>
+  </body>
+</html>
