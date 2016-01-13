@@ -1,7 +1,4 @@
 *.DS_Store
-/css/*
-/bower_components/*
-/node_modules/*
 /data_imports/
 /img/
 /related_docs/
