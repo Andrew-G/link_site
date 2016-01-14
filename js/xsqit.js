@@ -1,3 +1,5 @@
+/* I BELIEVE THIS IS DEPRECATED? */
+
 TOTECS.retail.loader.loadFunction(function(){
 	/* Model Search Listing function*/
 	var modelSearchListing = function(type, args, me){

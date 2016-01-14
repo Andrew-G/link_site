@@ -400,6 +400,7 @@ FOR EXAMPLE, on the motul page create an area with
 .model-search-form-active {
 	@include breakpoint(large) {
 		height: 7.6rem !important;
+		transition: 0.5s;
 	}
 }
 

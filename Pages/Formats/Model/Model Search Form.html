@@ -1,5 +1,5 @@
 <!-- Model Search Form -->
-<div class="page-search-bike hide-home">
+<div class="page-search-bike model-search-form hide-home">
 	<div class="row">
 		<div class="small-12 medium-12 large-3 columns">
 			<h3 class="hide-for-small">Select <strong>Your</strong> Bike</h3>
@@ -9,7 +9,7 @@
 				</a>
 			</span>
 		</div>
-		<div class="small-4 medium-3 large-2 columns model-search-hide">
+		<div class="small-4 medium-3 large-2 columns model-search-hide make-search-element">
 			$make_select$
 		</div>
 		<div class="small-4 medium-3 large-3 columns model-search-hide">
@@ -18,9 +18,13 @@
 		<div class="small-4 medium-3 large-2 columns model-search-hide">
 			$year_select$
 		</div>
-
+		
 		<div class="small-12 medium-3 large-2 columns model-search-hide">
-			<button class="page-search-button" onclick="$model_search_onclick$">Search</button>
+			<button class="page-search-button" onclick="\$('.dat-loader').toggle(); $model_search_onclick$"><span class="dat-loader">Search</span><span style="display:none;" class="dat-loader">Loading..</span></button>
+		</div>
+		
+		<div class="small-12 columns model-search-tip" style="display:none;">
+			<h5 class="white text-center ultra-text-shadow" style="margin:0;padding:1rem;">Unsure of your model or year? Just click <strong>Search</strong>.</h5>
 		</div>
 	</div>
 </div>
@@ -73,6 +77,11 @@
 	});
 </script>
 
+
+
+
+
+<!--DEPRECATED -->
 
 <div class="grey3-bg">
 	<div class="row">
