@@ -61,12 +61,33 @@ LNK - Basket Listing w Social
 	<li><a href="https://www.instagram.com/pirellimotoaus" target="_blank">Pirelli</a></li>
 	<li><a href="https://www.instagram.com/motulaus" target="_blank">Motul</a></li>
 </ul>
-<ul id="dropbasket" data-dropdown-content aria-hidden="true">
-	<li><h5>Wishlist</h5></li>
+<ul id="dropbasket" data-dropdown-content class="f-dropdown wishlist-dropdown" aria-hidden="true">
+	<li class="wishlist-dropdown-header">
+		<div class="row">
+			<div class="medium-12 columns"><p><strong>Wishlist</strong></p></div>
+		</div>
+	</li>
+	<span class="wishlist-dropdown-scroller">
 
 <!-- LNK - Basket Listing Area with Social Record -->
-<li>$basketProduct_image$ <a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$_B_Description1$</a></li>
+<li>$basketProduct_image$ <a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$_B_Description1$</a> <a class="" href="#" onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></a></li>
+
+<li>
+	<div class="row">
+		<div class="medium-2 columns"><a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$basketProduct_image$</a></div>
+		<div class="medium-6 columns"><a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$_B_Description1$</a></div>
+		<div class="medium-3 columns"><a href="http://linkint.prod.xsqit.com/LNK-product-detail/$_B_ItemID$_item.html">$_B_ItemID$</a> <a class="" href="#" onclick="$deleteProduct_onclick$"><i class="fa fa-times"></i></a></div>
+	</div>
+</li>
 
 <!-- LNK - Basket Listing Area with Social Footer -->
-	<li>Total: $cart_view_TotalItem_Integer$</li>
+	</span>
+	<li class="wishlist-dropdown-header">
+		<div class="row">
+			<div class="medium-6 columns"><p>Total $cart_view_TotalItem_Integer$ item(s)</p></div>
+			<div class="medium-6 columns" style="text-align:right;">
+				<p><a href="http://linkint.prod.xsqit.com/LNK-wishlist.html">View wishlist <i class="fa fa-chevron-circle-right"></i></a></p>
+			</div>
+		</div>
+	</li>
 </ul>

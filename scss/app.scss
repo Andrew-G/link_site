@@ -218,6 +218,7 @@ $fon-size-normal: rem-calc(14);
 	.social-media-icons {
 		text-align: right;
 		.notification-icon {
+			@extend .pointer-hover;
 			i.fa {
 				position: relative;
 				.badge {
@@ -395,62 +396,6 @@ FOR EXAMPLE, on the motul page create an area with
 		}
 	}
 }
-
-// Styling the off canvas user info
-ul.user-info-title {
-	.esiteretarea {
-		li {
-			&:not(:first-child) {
-				display: block;
-				padding: rem-calc(4) rem-calc(8);
-				color: $col-light-grey-font;
-			}
-			label {
-				@extend .upper-case-space;
-				@extend .text-shadow;
-			}
-		}
-		.user-info-item {
-			display: block;
-//				padding: rem-calc(4) rem-calc(8);
-			div {
-				@extend .upper-case-space;
-				@extend .text-shadow;
-				display: inline-block;
-				.user-info-bsk-img {
-					background: #FFF;
-					text-align: center;
-					img {
-						max-height: rem-calc(32);
-						max-width: rem-calc(32);
-					}
-				}
-				label {
-					padding: 0px;
-				}
-				input {
-					margin: 0;
-				}
-			}
-		}
-		.user-name {
-//			text-transform: capitalize;
-			@extend .upper-case-space;
-			@extend .text-shadow;
-			font-size: rem-calc(8);
-		}
-		.hold-Y {
-			color: $col-link!important;
-		}
-		.hold-N {
-			display: none!important;
-		}
-		.get_basket_view_product {
-//			display:none;
-		}
-	}
-}
-
 
 .model-search-form-active {
 	@include breakpoint(large) {
@@ -1318,4 +1263,29 @@ ul.user-info-title {
 	}
 }
 
-//PRODUCT REVIEWS
+.wishlist-dropdown {
+	max-width: 50% !important;
+	.wishlist-dropdown-header, .wishlist-dropdown-footer {
+		padding: 0.5rem;
+		p, a {
+			padding: 0;
+			margin: 0;
+			@extend .white;
+			@extend .ultra-text-shadow;
+		}
+		@extend .grey1-bg;
+		&:hover, &:focus {
+			@extend .grey1-bg;
+		}
+	}
+	.wishlist-dropdown-scroller {
+		max-height: 400px;
+		overflow-x: hidden;
+		overflow-y: scroll;
+		display: block;
+	}
+}
+
+#dropbasket.f-dropdown:before {
+    border-color: transparent transparent #333 transparent !important;
+}
