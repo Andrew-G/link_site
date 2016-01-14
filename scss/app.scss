@@ -1267,13 +1267,18 @@ FOR EXAMPLE, on the motul page create an area with
 	max-width: 50% !important;
 	.wishlist-dropdown-header, .wishlist-dropdown-footer {
 		padding: 0.5rem;
+		@extend .grey1-bg;
 		p, a {
 			padding: 0;
 			margin: 0;
-			@extend .white;
 			@extend .ultra-text-shadow;
 		}
-		@extend .grey1-bg;
+		p {
+			@extend .white;
+		}
+//		a {
+//			color: #D12828;
+//		}
 		&:hover, &:focus {
 			@extend .grey1-bg;
 		}
@@ -1283,6 +1288,7 @@ FOR EXAMPLE, on the motul page create an area with
 		overflow-x: hidden;
 		overflow-y: scroll;
 		display: block;
+//		padding-right: 1rem;
 	}
 }
 
