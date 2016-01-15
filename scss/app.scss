@@ -233,7 +233,7 @@ $fon-size-normal: rem-calc(14);
 					border-radius: 50%;
 					text-align: center;
 					color: #fafafa;
-					background: #d12828;
+					background: $col-link;
 					@extend .text-shadow;
 				}
 			}
@@ -1273,13 +1273,8 @@ FOR EXAMPLE, on the motul page create an area with
 			padding: 0;
 			margin: 0;
 			@extend .ultra-text-shadow;
-		}
-		p {
 			@extend .white;
 		}
-//		a {
-//			color: #D12828;
-//		}
 		&:hover, &:focus {
 			@extend .grey1-bg;
 		}
@@ -1290,6 +1285,13 @@ FOR EXAMPLE, on the motul page create an area with
 		overflow-y: scroll;
 		display: block;
 //		padding-right: 1rem;
+		li {
+			a {
+				i {
+					color: $col-link;
+				}
+			}
+		}
 	}
 }
 
