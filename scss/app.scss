@@ -518,7 +518,6 @@ FOR EXAMPLE, on the motul page create an area with
 	.main-categories-header {
 		.cat-listing {
 			cursor: pointer;
-//			padding: rem-calc(5);
 			padding: 0.5rem 0.5rem 0 0;
 			@media #{$small-down} {
 				padding: 0.5rem 0 0 0;
@@ -530,7 +529,6 @@ FOR EXAMPLE, on the motul page create an area with
 			.cat-listing-content {
 				width: 100%;
 				color: $col-dark-font;
-//				padding: rem-calc(5);
 				padding: 0;
 				background: $white;
 				box-shadow: 0 0 4px 0px rgba(0,0,0,0.25);
@@ -576,7 +574,6 @@ FOR EXAMPLE, on the motul page create an area with
 					text-transform: uppercase;
 					font-size: 0.875rem;
 					font-style: normal;
-//					font-family: 'Helvetica Neue', Helvetica, Helvetica, Arial, sans-serif;
 					p {
 						// Because not respecting data consistency is all good right?
 						// This styling is for when totecs overwrites our data and adds <p> tags
@@ -761,7 +758,6 @@ FOR EXAMPLE, on the motul page create an area with
 		.mopro-product-img {
 			min-width: 70px;
 			@media #{$small-down} {
-//				text-align: center;
 				width: 100%;
 			}
 		}
@@ -1075,7 +1071,6 @@ FOR EXAMPLE, on the motul page create an area with
 	text-align: center;
   background-color: white;
   border: 0;
-//  border: 1px solid #DDDDDD;
   margin-bottom: rem-calc(20);
   padding: rem-calc(5);
 	.product_details_image_list_placeholder {
@@ -1210,7 +1205,6 @@ FOR EXAMPLE, on the motul page create an area with
 		}
 	}
 	.prode-add-to-cart {
-//		text-align: right;
 		input {
 			display: inline-block;
 			width: 50%;
