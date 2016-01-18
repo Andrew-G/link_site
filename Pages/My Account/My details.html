@@ -84,10 +84,11 @@
 <h4>My Address</h4>
 <hr>
 
+<!-- This doesn't work $addressnew_toggleform_onclick$-->
 <form>					
 	<div class="row">
 		<div class="small-9 medium-10 columns">
-			<label>Select address (No address? <a onclick="$addressnew_toggleform_onclick$" href="javascript: void(0);">Add a new address</a>)</label>
+			<label>Select address (No address? <a onclick="\$('#delvrnew_div').toggle();" href="javascript: void(0);">Add a new address</a>)</label>
 			$addressSelect$
 		</div>
 		<div class="small-3 medium-2 columns">
