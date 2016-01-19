@@ -38,12 +38,13 @@ function searchLocations() {
 	/* Scrolls down to the map */
 	scrollToAnchor('map');
 	var address = document.getElementById("addressInput").value + ", australia";
+	var desiredStoreType = $('#typeSelect').val();
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({
 		address: address
 	}, function (results, status) {
 		if (status == google.maps.GeocoderStatus.OK) {
-			searchLocationsNear(results[0].geometry.location);
+			searchLocationsNear(results[0].geometry.location, desiredStoreType);
 		} else {
 			document.getElementById('locationSelect').innerHTML = '<li class="heading">Address not found.</li><li>' + address + '</li>';
 		}
@@ -67,9 +68,9 @@ function getRadius() {
 	return radius;
 }
 
-function searchLocationsNear(center) {
+function searchLocationsNear(center, desiredType) {
 	clearLocations();
-
+	
 	var searchUrl = 'FindLocationAuto.php?lat=' + center.lat() + '&lng=' + center.lng() + '&radius=' + getRadius();
 	downloadUrl(searchUrl, function (data) {
 		var xml = parseXml(data);
@@ -85,20 +86,23 @@ function searchLocationsNear(center) {
 			document.getElementById('locationSelect').innerHTML = resultsHeader;
 			var bounds = new google.maps.LatLngBounds();
 			for (var i = 0; i < markerNodes.length; i++) {
-				var name = markerNodes[i].getAttribute("name");
-				var initAddress = markerNodes[i].getAttribute("address");
-				/* Adds spaces to the commas */
-				var address = initAddress.replace(/,/g , ", ");
-				var website = markerNodes[i].getAttribute("website");
-				var phone = markerNodes[i].getAttribute("phone");
-				var distance = parseFloat(markerNodes[i].getAttribute("distance"));
-				var latlng = new google.maps.LatLng(
-					parseFloat(markerNodes[i].getAttribute("lat")),
-					parseFloat(markerNodes[i].getAttribute("lng")));
+				if (desiredType == markerNodes[i].getAttribute("storeType") || desiredType == "all") {
+					var name = markerNodes[i].getAttribute("name");
+					var initAddress = markerNodes[i].getAttribute("address");
+					/* Adds spaces to the commas */
+					var address = initAddress.replace(/,/g , ", ");
+					var website = markerNodes[i].getAttribute("website");
+					var phone = markerNodes[i].getAttribute("phone");
+					var distance = parseFloat(markerNodes[i].getAttribute("distance"));
+					var latlng = new google.maps.LatLng(
+						parseFloat(markerNodes[i].getAttribute("lat")),
+						parseFloat(markerNodes[i].getAttribute("lng"))
+					);
 
-				createOption(name, distance, i, address);
-				createMarker(latlng, name, address, website, phone);
-				bounds.extend(latlng);
+					createOption(name, distance, i, address);
+					createMarker(latlng, name, address, website, phone);
+					bounds.extend(latlng);
+				}
 			}
 		}
 		map.fitBounds(bounds);
