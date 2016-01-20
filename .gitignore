@@ -1,5 +1,2 @@
 *.DS_Store
-/data_imports/
-/img/
-/related_docs/
-/Plugins/
+/content/
