@@ -69,6 +69,7 @@
 	$(document).ready(function() {
 		$('#fitment-table').dataTable( {
 			"lengthChange": false,
+			"pageLength": 15,
 			"fnPreDrawCallback": function() {
 				$('#fitment-table').addClass("fitment-loading");
 			},
@@ -93,6 +94,7 @@
 			var initDataTable = function(type, args, me){
 				$('#fitment-table').dataTable( {
 					"lengthChange": false,
+					"pageLength": 15,
 					"fnPreDrawCallback": function() {
 						$('#fitment-table').addClass("fitment-loading");
 					},
