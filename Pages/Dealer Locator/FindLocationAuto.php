@@ -29,7 +29,8 @@ if (!$db_selected) {
 
 // Add a column in the DB and add that field to the end of this SELECT statement - Andrew
 // You can change the table in the FROM statement - Andrew
-$query = sprintf("SELECT address, name, lat, lng, website, phone, storeType, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM LinkDealers HAVING distance < '%s' ORDER BY distance LIMIT 0 , 200",
+//SELECT address, name, lat, lng, website, phone, brand FROM LinkDealers D LEFT JOIN stockists S ON D.id = S.id
+$query = sprintf("SELECT address, name, lat, lng, website, phone, brand, ( 6371 * acos( cos( radians('%s') ) * cos( radians( lat ) ) * cos( radians( lng ) - radians('%s') ) + sin( radians('%s') ) * sin( radians( lat ) ) ) ) AS distance FROM LinkDealers D LEFT JOIN stockists S ON D.id = S.id HAVING distance < '%s' ORDER BY distance LIMIT 0 , 200",
   mysql_real_escape_string($center_lat),
   mysql_real_escape_string($center_lng),
   mysql_real_escape_string($center_lat),
@@ -50,7 +51,7 @@ while ($row = @mysql_fetch_assoc($result)){
   $newnode->setAttribute("address", $row['address']);
   $newnode->setAttribute("website", $row['website']);
   $newnode->setAttribute("phone", $row['phone']);
-  $newnode->setAttribute("storeType", $row['storeType']);
+  $newnode->setAttribute("brand", $row['brand']);
   $newnode->setAttribute("lat", $row['lat']);
   $newnode->setAttribute("lng", $row['lng']);
   $newnode->setAttribute("distance", $row['distance']);

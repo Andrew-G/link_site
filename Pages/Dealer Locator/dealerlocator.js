@@ -38,13 +38,13 @@ function searchLocations() {
 	/* Scrolls down to the map */
 	scrollToAnchor('map');
 	var address = document.getElementById("addressInput").value + ", australia";
-	var desiredStoreType = $('#typeSelect').val();
+	var desiredStockist = $('#typeSelect').val();
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({
 		address: address
 	}, function (results, status) {
 		if (status == google.maps.GeocoderStatus.OK) {
-			searchLocationsNear(results[0].geometry.location, desiredStoreType);
+			searchLocationsNear(results[0].geometry.location, desiredStockist);
 		} else {
 			document.getElementById('locationSelect').innerHTML = '<li class="heading">Address not found.</li><li>' + address + '</li>';
 		}
@@ -68,7 +68,7 @@ function getRadius() {
 	return radius;
 }
 
-function searchLocationsNear(center, desiredType) {
+function searchLocationsNear(center, theDesiredStockist) {
 	clearLocations();
 	
 	var searchUrl = 'FindLocationAuto.php?lat=' + center.lat() + '&lng=' + center.lng() + '&radius=' + getRadius();
@@ -86,7 +86,7 @@ function searchLocationsNear(center, desiredType) {
 			document.getElementById('locationSelect').innerHTML = resultsHeader;
 			var bounds = new google.maps.LatLngBounds();
 			for (var i = 0; i < markerNodes.length; i++) {
-				if (desiredType == markerNodes[i].getAttribute("storeType") || desiredType == "all") {
+				if (theDesiredStockist == markerNodes[i].getAttribute("brand") || theDesiredStockist == "all") {
 					var name = markerNodes[i].getAttribute("name");
 					var initAddress = markerNodes[i].getAttribute("address");
 					/* Adds spaces to the commas */
