@@ -13,17 +13,9 @@
 	<div class="small-12 large-12 columns">
 		<div class="prode-data-placeholder">
 			<div class="row">
-				<div class="small-12 large-12 columns">
+				<div class="prode-data-points small-12 large-12 columns">
 					<h3 class="always-h3">$_P_DescriptionHolder$</h3>
 					<h4>$SES_locale_currency_symbol$$combinations_item_price$ $_P_Unit$</h4>
-					<hr>
-				</div>
-				
-				<div class="prode-data-points small-12 columns">
-					<h4 class="prode-header">Specifications &nbsp;<i class="fa fa-cogs"></i></h4>
-					<div class="prode-combo-box">
-						$combinations_table$$combination_selection_label$
-					</div>
 					<table class="prode-data-table">
 						<tr>
 							<td><strong>Part No:</strong></td>
@@ -47,12 +39,19 @@
 					</table>
 				</div>
 				
+				<div class="prode-data-points small-12 columns">
+					<h4 class="prode-header">Options &nbsp;<i class="fa fa-cogs"></i></h4>
+					<div class="prode-combo-box">
+						$combinations_table$$combination_selection_label$
+					</div>
+				</div>
+				
 				<div class="hide-for-large-up small-12 columns">
 					<hr>
 				</div>
 				
 				<div class="small-12 columns">
-					<h4 class="prode-header">Information &nbsp;<i class="fa fa-info-circle"></i></h4>
+					<h4 class="prode-header">Information & Specifications &nbsp;<i class="fa fa-info-circle"></i></h4>
 					<div>
 						$_P_Description2Holder$
 					</div>
