@@ -21,4 +21,10 @@ $(document).ready(function(){
 		$('.model-search-tip').show();
 		$('.model-search-form').addClass('model-search-form-active');
 	});
+	
+	if ($('.prode-combo-box > div').length > 1) {
+		$('.combo-display').show();
+	} else {
+		$('.combo-display').hide();
+	}
 });
