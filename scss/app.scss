@@ -1161,7 +1161,9 @@ FOR EXAMPLE, on the motul page create an area with
 				padding: rem-calc(5 5 5 0);
 			}
 			.prode-itemID {
-				color: $col-link;
+//				color: $col-link;
+				@extend h4;
+				color: #000!important;
 			}
 			.prode-stock-high {
 				@extend .green;
