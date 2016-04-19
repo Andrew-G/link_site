@@ -149,7 +149,7 @@
 					
 					<div class="row">
 						<div class="small-12 columns">
-							<small>$termsagree$</small><br />
+							<small id="terms-agree-box">$termsagree$</small><br />
 							$receive_marketing$ <small>I would like to receive information about competitions and products</small>
 						</div>
 					</div>
@@ -169,9 +169,10 @@
 //$(document).on('keyup', 'input[name=login], input[name=email]', function() {
 //  $('input[name=login], input[name=email]').not(this).val(this.value);
 //})
-$(document).on('keyup', 'input[name=name1]', function() {
-  $('input[name=name1], input[name=displayname]').not(this).val(this.value);
-})
+	$(document).on('keyup', 'input[name=name1]', function() {
+		$('input[name=name1], input[name=displayname]').not(this).val(this.value);
+	})
+	$('#terms-agree-box').html('<input type="checkbox" name="termsagree"> I agree to your <a href="Terms And Conditions.html" onclick="javascript: window.open(' + "'http://www.linkint.com.au/terms.html','TERMS','width=650,height=500,resizable,scrollbars=yes'" + ');return false;"> Terms &amp; Conditions</a>');
 </script>
 
 
