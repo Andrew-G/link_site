@@ -222,6 +222,7 @@ $fon-size-normal: rem-calc(14);
 			i.fa {
 				position: relative;
 				.badge {
+					font-family: $fon-main;
 					font-size: 0.8rem;
 					display: block;
 					position: absolute;
