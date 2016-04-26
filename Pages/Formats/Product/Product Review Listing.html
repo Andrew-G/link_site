@@ -1,20 +1,20 @@
 <!-- OLD FB SHARE METHOD-->
- <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '209152182767194',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
+<script>
+	window.fbAsyncInit = function() {
+		FB.init({
+			appId      : '209152182767194',
+			xfbml      : true,
+			version    : 'v2.5'
+		});
+	};
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
 </script>
 
 <a href="" onclick="FB.ui({method: 'feed',link: window.location.href, caption: 'Product Review by ' + '$product_review_user_name1$'}, function(response){});return false;">Share <i class="fa fa-share"></i></a>
