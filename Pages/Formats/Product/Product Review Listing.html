@@ -1,5 +1,5 @@
-<!--Header-->
-<script>
+<!-- OLD FB SHARE METHOD-->
+ <script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '209152182767194',
@@ -16,35 +16,36 @@
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
 </script>
+
+<a href="" onclick="FB.ui({method: 'feed',link: window.location.href, caption: 'Product Review by ' + '$product_review_user_name1$'}, function(response){});return false;">Share <i class="fa fa-share"></i></a>
+<!-- OLD FB SHARE METHOD-->
+
+
+
+<!--Header-->
 <span class="prode-data-placeholder"><h4 class="prode-header">Customer Reviews &nbsp;<i class="fa fa-comments-o"></i></h4></span>
 Rating<br>
 $product_review_rating_average_image$ <span style="font-size:80%;color:#555555;">overall / $product_review_rating_total$ reviews</span>
-
-<!--Record OLD -->
-<p style="margin:0;"><b style="font-size:140%">&#8220;</b><span style="font-size:120%">$product_review_summary$</span><b style="font-size:140%">&#8221;</b> - <i>$product_review_user$</i> on $product_review_date$</p>
-$product_review_rating_image$
-<p><i>$product_review_description$</i></p>
 
 <!-- Record -->
 <div style="margin: 2rem 0 0 0;">
 	<span style="font-size:120%">$product_review_summary$</span>
 	<span style="display:none;" class="review-record-$product_review_rating$ review-check green"> &nbsp;<i class="fa fa-check"></i></span>
 	<span style="display:none;" class="review-record-$product_review_rating$ review-cross pasred"> &nbsp;<i class="fa fa-times"></i></span>
-	<a href="" onclick="FB.ui({method: 'feed',link: window.location.href, caption: 'Product Review by ' + '$product_review_user_name1$'}, function(response){});return false;">Share <i class="fa fa-share"></i></a>
-	<br>
+	<div class="addthis_native_toolbox"></div>
 	$product_review_rating_image$ &nbsp;<span style="color:#555;">$product_review_date$ - $product_review_user_name1$ &nbsp;<i class="fa fa-user"></i></span><br>
 	<blockquote>$product_review_description$</blockquote>
 </div>
 
 <!--Criterion Record-->
 <tr>
-		<td align="left">
-			$product_review_criterion$ :
-		</td>
-		<td align="left">
-			$product_review_rating_image$  $product_review_critique$ 
-		</td>
-	</tr>
+	<td align="left">
+		$product_review_criterion$ :
+	</td>
+	<td align="left">
+		$product_review_rating_image$  $product_review_critique$ 
+	</td>
+</tr>
 	
 <!--Footer-->
 <style type="text/css">
