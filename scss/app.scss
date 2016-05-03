@@ -876,13 +876,19 @@ FOR EXAMPLE, on the motul page create an area with
 			height: auto!important;
 		}		
 	}
-.video-thumbnail {
-	border: 0px !important;
-	.video-title {
-		line-height: 2.25rem;
-		font-weight: bold;
+	.video-thumbnail {
+		border: 0px !important;
+		img {
+			padding-bottom: 0.5rem;
+		}
+		.video-title, .video-title p {
+			font-weight: bold;
+		}
+		p {
+			margin-bottom: 0;
+			line-height: inherit;
+		}
 	}
-}
 	.news-body-short {
 		width: 100%;
 		padding: 2rem 1rem 1rem 1rem;
