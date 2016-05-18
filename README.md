@@ -39,13 +39,29 @@ This project uses **.scss** files which can be compiled into the **.css** file u
 ## Key global areas <a name="areas"></a>
 
 ### Navigation
+
+### Top bar
+
+Coming soon.
+
 #### Side bar
 
-Make all changes to the side bar in the **_Global Product Side Nav.html_** file, then paste the entire html into the _Global Product Side Nav_ container.
+Here is the basic HTML for the side bar navigation, this example is using the **JT Sprockets** page:
 
-To get a specific side nav to appear on the page, add this code to the pages sidebar area, replacing ```CLASSNAME``` with the class of the side bar needed for that page.
+```html
+<li class="heading jt-nav">JT Sprockets</li>
+<li class="jt-nav"><a href="http://www.linkint.com.au/jt-sprockets.html">About</a></li>
+``` 
 
-```
+To add content to the side bar, add a list element with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with the name of the page that the side bar belongs to.
+
+Add the class ```heading``` to the list element that contains the heading.
+
+Make all changes to the side bar in the **_Global Product Side Nav.html_** file, then paste the entire HTML into the **_Global Product Side Nav_** global area.
+
+To get a specific side nav to appear on a page, add this code to the pages local side bar area, replacing ```CLASSNAME``` with the class of the side bar needed for that page.
+
+```html
 <style type="text/css">
 	.CLASSNAME-nav {
 		display: list-item!important;
