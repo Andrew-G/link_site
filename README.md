@@ -1,20 +1,23 @@
 # Link International
-Link International is Australia's leading motorcycle parts importer and distributor, this is the repository for linkint.com.au.
+Link International is Australia's leading motorcycle parts importer and distributor; this is the repository for linkint.com.au.
 
 ## Table of contents
 1. [About](#about)
 2. [Maintenance](#maintenance)
-	1. Updating pages and area formats
-	2. Using SCSS to edit the styling
-3. [Key global areas](#areas)
-	1. Navigation
-		1. Side bar
+	1. [Updating pages and area formats](#updating-pages-and-area-formats)
+	2. [Using SCSS to edit the styling](#using-SCSS-to-edit-the-styling)
+3. [Key global areas](#key-global-areas)
+	1. [Navigation](#navigation)
+		1. [Top Bar](#top-bar)
+		2. [Mobile Nav](#mobile-nav)
+		3. [Products drop down](#products-drop-down)
+		4. [Side bar](#side-bar)
 
 
 
 
 
-## About <a name="about"></a>
+## About
 The Link site is created using:
 * [TOTECS CMS](http://www.totecs.com/index_page.html)
 * [Foundation 5](http://foundation.zurb.com/sites/docs/v/5.5.3/) with [SCSS](http://sass-lang.com/)
@@ -24,7 +27,7 @@ The Link site is created using:
 * [Stacktable](http://johnpolacek.github.io/stacktable.js/)
 
 
-## Maintenance <a name="maintenance"></a>
+## Maintenance
 
 ### Updating pages and area formats
 The **.html** files under **/pages/** are snippets. These files do not get displayed directly in the browser. The snippets are pasted into the TOTECS CMS page areas or format libraries.
@@ -36,13 +39,21 @@ This project uses **.scss** files which can be compiled into the **.css** file u
 - Make all styling changes in the **app.scss** file
 - Foundation core styling changes can be made in the **_settings.scss** file
 
-## Key global areas <a name="areas"></a>
+## Key global areas
 
 ### Navigation
 
-### Top bar
+#### Top bar
 
-Coming soon.
+Coming soon
+
+#### Mobile nav
+
+Coming soon
+
+#### Products drop down
+
+Coming soon
 
 #### Side bar
 
@@ -53,7 +64,7 @@ Here is the basic HTML for the side bar navigation, this example is using the **
 <li class="jt-nav"><a href="http://www.linkint.com.au/jt-sprockets.html">About</a></li>
 ``` 
 
-To add content to the side bar, add a list element with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with the name of the page that the side bar belongs to.
+To add content to the side bar, add a list element with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with an abbreviated name of the page that the side bar belongs to.
 
 Add the class ```heading``` to the list element that contains the heading.
 
