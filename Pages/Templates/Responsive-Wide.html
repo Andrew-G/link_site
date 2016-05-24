@@ -8,12 +8,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 		
 		<!-- CSS -->
+		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/slick.css" />
+		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/slick-theme.css" />
 		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/font-awesome.min.css">
 		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/datatables.min.css" />
 		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/stacktable.css" />
-		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/slick.css" />
-		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/slick-theme.css" />
 		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/app.css" />
+		
+		<!-- Slick hack to hide before initialisation -->
+		<style type="text/css">
+			.slick-slider {
+				visibility: hidden;
+			}
+			.slick-slider.slick-initialized {
+				visibility: visible;
+			}
+		</style>
 		
 		<meta property="og:title"         content="Link International" />
 		
@@ -52,7 +62,6 @@
 				</div>
 			</div>
 			
-
 			<!-- Footer -->
 			<div class="grey3-bg footer" style="border-top: 4px solid rgba(0, 0, 0, 0.05);">
 				$global_footer$
