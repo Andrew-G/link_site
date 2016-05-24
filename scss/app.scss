@@ -495,7 +495,7 @@ FOR EXAMPLE, on the motul page create an area with
 					padding:0 0 0 1rem;
 					// This keeps both boxes equal height on large screens, so long as there is < 5 lines of text
 					@media #{$large-and-up} {
-						min-height: 150px;
+						min-height: 110px;
 					}
 					h3 {
 						@extend .upper-case-space;
@@ -829,7 +829,7 @@ FOR EXAMPLE, on the motul page create an area with
 .news-record {
 	color: $col-light-grey-font;
 	margin-top: 1rem;
-	margin-bottom: 1rem;
+//	margin-bottom: 1rem;
 	overflow: hidden;
 	.news-header {
 		@extend .grey3-bg;
@@ -840,54 +840,63 @@ FOR EXAMPLE, on the motul page create an area with
 			vertical-align: middle;
 		}
 	}
-	.news-title {
-		overflow: hidden;
-		width: 100%;
-		position: relative;
-		padding: 0;
-		background: none;
-		height: auto;
-		border-top: 0px;
-		border-right: 1px solid #bbb;
-		border-bottom: 0px;
-		border-left: 1px solid #bbb;
-		p {
-			background: rgba(0,0,0,0.75);
-			padding: 1rem;
-			text-align: center;
-			color: #f7f7f7;
-			position: absolute;
-			left: 0;
-			top: 0;
-			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-			width: 100%;
-			@media #{$large-and-up} {
-				font-size: 1.6rem;
-			}
-			@media #{$medium-only} {
-				font-size: 1.3rem;
-			}
-			@media #{$small-only} {
-				font-size: 1rem;
+//	.news-title {
+//		overflow: hidden;
+//		width: 100%;
+//		position: relative;
+//		padding: 0;
+//		background: none;
+//		height: auto;
+//		border-top: 0px;
+//		border-right: 1px solid #bbb;
+//		border-bottom: 0px;
+//		border-left: 1px solid #bbb;
+//		p {
+//			background: rgba(0,0,0,0.75);
+//			padding: 1rem;
+//			text-align: center;
+//			color: #f7f7f7;
+//			position: absolute;
+//			left: 0;
+//			top: 0;
+//			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+//			width: 100%;
+//			@media #{$large-and-up} {
+//				font-size: 1.6rem;
+//			}
+//			@media #{$medium-only} {
+//				font-size: 1.3rem;
+//			}
+//			@media #{$small-only} {
+//				font-size: 1rem;
+//			}
+//		}
+//		img {
+//			width: auto!important;
+//			height: auto!important;
+//		}		
+//	}
+	.media-thumbnail {
+		border: 0px !important;
+		a {
+			color: $col-dark-font;
+			&:hover {
+				color: $col-link;
 			}
 		}
-		img {
-			width: auto!important;
-			height: auto!important;
-		}		
-	}
-	.video-thumbnail {
-		border: 0px !important;
 		img {
 			padding-bottom: 0.5rem;
 		}
-		.video-title, .video-title p {
+		.media-title, .media-title p {
 			font-weight: bold;
 		}
 		p {
 			margin-bottom: 0;
 			line-height: inherit;
 		}
+	}
+	.news-detail-heading, .news-detail-heading p {
+		@extend h3;
 	}
 	.news-body-short {
 		width: 100%;
