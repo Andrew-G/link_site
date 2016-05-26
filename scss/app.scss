@@ -1065,6 +1065,11 @@ FOR EXAMPLE, on the motul page create an area with
 	}
 }
 
+//SITEMAP
+table.cms_sitemap {
+	@extend .width-100;
+}
+
 // PRODUCT PAGES
 
 // the main logo on all the product pages
@@ -1186,7 +1191,7 @@ FOR EXAMPLE, on the motul page create an area with
 			}
 			.prode-itemID {
 //				color: $col-link;
-				@extend h4;
+//				@extend h4;
 				color: #000!important;
 			}
 			.prode-stock-high {
