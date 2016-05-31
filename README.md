@@ -9,8 +9,8 @@ Link International is Australia's leading motorcycle parts importer and distribu
 3. [Key global areas](#key-global-areas)
 	1. [Navigation](#navigation)
 		1. [Top Bar](#top-bar)
-		2. [Mobile Nav](#mobile-nav)
-		3. [Products drop down](#products-drop-down)
+		2. [Products drop down](#products-drop-down)
+		3. [Mobile Nav](#mobile-nav)
 		4. [Side bar](#side-bar)
 
 
@@ -45,28 +45,57 @@ This project uses **.scss** files which can be compiled into the **.css** file u
 
 #### Top bar
 
+Official top bar documentation can be found on the [here](http://foundation.zurb.com/sites/docs/v/5.5.3/components/topbar.html) on the Foundation docs.
+
 Coming soon
+
+#### Products Drop Down
+
+__Files:__ *Global Products Drop Down.html*, *Global Nav.html*
+
+The Products Drop Down navigation is *only used on medium and up screens*, it is not used for mobile devices. When editing the Products Drop Down area, the Global Nav area *must* also be edited for the mobile styles.
+
+
+Open __*Global Products Drop Down.html*__
+
+Basic HTML for each brand option:
+
+```html
+<li><a href="BRAND-PAGE-URL"><img alt="" src="BRAND-LOGO-IMAGE"></a></li>
+```
+
+- To remove a brand, delete the corresponding list item.
+- To add a brand, add a list item using the HTML above, where ```BRAND-PAGE-URL``` is replaced with the URL of the brand page, and ```BRAND-LOGO-IMAGE``` is replaced with the URL of the logo.
+- The logo image must be a *PNG* file with the dimensions *250* x *130*.
+
+The changes made in the Global Product Drop Down area must also be made in the Global Nav area. Use the same methods listed in the [Top Bar](#top-bar) section to edit the *mobile* navigation.
 
 #### Mobile nav
 
-Coming soon
+Open __*Global Nav.html*__
 
-#### Products drop down
+Basic HTML for Top Bar navigation:
 
-Coming soon
+```<li><a href="BRAND-PAGE-URL">BRAND-NAME</a></li>```
+
+- To remove a brand, delete the corresponding list item.
+- To add a brand, add a list item using the HTML above, where ```BRAND-PAGE-URL``` is replaced with the URL of the brand page, and ```BRAND-NAME``` is replaced with the name of the brand.
+
 
 #### Side bar
 
-Here is the basic HTML for the side bar navigation, this example is using the **JT Sprockets** page:
+__File:__ *Global Sidebar.html*
+
+Basic HTML for the side bar navigation, this example is using the **JT Sprockets** page:
 
 ```html
 <li class="heading jt-nav">JT Sprockets</li>
 <li class="jt-nav"><a href="http://www.linkint.com.au/jt-sprockets.html">About</a></li>
 ``` 
 
-To add content to the side bar, add a list element with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with an abbreviated name of the page that the side bar belongs to.
+To add content to the side bar, add a list item with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with an abbreviated name of the page that the side bar belongs to.
 
-Add the class ```heading``` to the list element that contains the heading.
+Add the class ```heading``` to the list item that contains the heading.
 
 Make all changes to the side bar in the **_Global Product Side Nav.html_** file, then paste the entire HTML into the **_Global Product Side Nav_** global area.
 
