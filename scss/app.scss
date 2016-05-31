@@ -898,22 +898,22 @@ FOR EXAMPLE, on the motul page create an area with
 	.news-detail-heading, .news-detail-heading p {
 		@extend h3;
 	}
-	.news-body-short {
-		width: 100%;
-		padding: 2rem 1rem 1rem 1rem;
-		background: rgba(0, 0, 0, 0.05);
-		border-top: 0px;
-		border-right: 1px solid #bbb;
-		border-bottom: 1px solid #bbb;
-		border-left: 1px solid #bbb;
-		p, p strong {
-			font-weight: 300 !important;
-			color: #333;
-		}
-	}
+//	.news-body-short {
+//		width: 100%;
+//		padding: 2rem 1rem 1rem 1rem;
+//		background: rgba(0, 0, 0, 0.05);
+//		border-top: 0px;
+//		border-right: 1px solid #bbb;
+//		border-bottom: 1px solid #bbb;
+//		border-left: 1px solid #bbb;
+//		p, p strong {
+//			font-weight: 300 !important;
+//			color: #333;
+//		}
+//	}
 	.news-body {
 		width: 100%;
-		padding: 2rem 0rem 1rem 0rem;
+		padding: 1rem 0rem 1rem 0rem;
 		p>img {
 			text-align: center;
 		}
