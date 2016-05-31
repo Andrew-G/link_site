@@ -882,6 +882,16 @@ FOR EXAMPLE, on the motul page create an area with
 	padding-right: 0px!important;
 }
 
+.media-heading {
+	.columns {
+		h2 {margin:0!important;}
+		a.button {
+			margin: 0.25rem 0 0 0 !important;
+			@extend .ultra-text-shadow;
+		}
+	}
+}
+
 // PAGINATION BUTTONS
 .paginator_page {
 	display: block;
