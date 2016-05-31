@@ -829,7 +829,6 @@ FOR EXAMPLE, on the motul page create an area with
 .news-record {
 	color: $col-light-grey-font;
 	margin-top: 1rem;
-//	margin-bottom: 1rem;
 	overflow: hidden;
 	.news-header {
 		@extend .grey3-bg;
@@ -840,42 +839,6 @@ FOR EXAMPLE, on the motul page create an area with
 			vertical-align: middle;
 		}
 	}
-//	.news-title {
-//		overflow: hidden;
-//		width: 100%;
-//		position: relative;
-//		padding: 0;
-//		background: none;
-//		height: auto;
-//		border-top: 0px;
-//		border-right: 1px solid #bbb;
-//		border-bottom: 0px;
-//		border-left: 1px solid #bbb;
-//		p {
-//			background: rgba(0,0,0,0.75);
-//			padding: 1rem;
-//			text-align: center;
-//			color: #f7f7f7;
-//			position: absolute;
-//			left: 0;
-//			top: 0;
-//			text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
-//			width: 100%;
-//			@media #{$large-and-up} {
-//				font-size: 1.6rem;
-//			}
-//			@media #{$medium-only} {
-//				font-size: 1.3rem;
-//			}
-//			@media #{$small-only} {
-//				font-size: 1rem;
-//			}
-//		}
-//		img {
-//			width: auto!important;
-//			height: auto!important;
-//		}		
-//	}
 	.media-thumbnail {
 		border: 0px !important;
 		a {
@@ -898,19 +861,6 @@ FOR EXAMPLE, on the motul page create an area with
 	.news-detail-heading, .news-detail-heading p {
 		@extend h3;
 	}
-//	.news-body-short {
-//		width: 100%;
-//		padding: 2rem 1rem 1rem 1rem;
-//		background: rgba(0, 0, 0, 0.05);
-//		border-top: 0px;
-//		border-right: 1px solid #bbb;
-//		border-bottom: 1px solid #bbb;
-//		border-left: 1px solid #bbb;
-//		p, p strong {
-//			font-weight: 300 !important;
-//			color: #333;
-//		}
-//	}
 	.news-body {
 		width: 100%;
 		padding: 1rem 0rem 1rem 0rem;
