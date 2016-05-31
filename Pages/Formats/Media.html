@@ -7,6 +7,7 @@
 
 <!-- LNK Media Details -->
 <div class="small-12 columns news-record news-border-box-overwrite">
+<!--
 	<div class="row">
 		<div class="small-6 columns centered" style="padding-right:0;">
 			<p class="news-header"><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small></p>
@@ -15,9 +16,34 @@
 			<p class="news-header"><i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
 		</div>
 	</div>
+-->
 	<div class="media-thumbnail">
 		$spare1$
 		<span class="media-title news-detail-heading">$heading$</span>
+		<p><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small> &nbsp;<i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
+	</div>
+	<div class="news-body">
+		<div class="addthis_native_toolbox"></div>
+		<br>
+		$body$
+	</div>
+</div>
+
+<!-- LNK Media Details No header -->
+<div class="small-12 columns news-record news-border-box-overwrite">
+<!--
+	<div class="row">
+		<div class="small-6 columns centered" style="padding-right:0;">
+			<p class="news-header"><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small></p>
+		</div>
+		<div class="small-6 columns centered" style="padding-left:0;">
+			<p class="news-header"><i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
+		</div>
+	</div>
+-->
+	<div class="media-thumbnail">
+		<span class="media-title news-detail-heading">$heading$</span>
+		<p><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small> &nbsp;<i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
 	</div>
 	<div class="news-body">
 		<div class="addthis_native_toolbox"></div>
