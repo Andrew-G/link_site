@@ -169,7 +169,11 @@ $fon-size-normal: rem-calc(14);
 		text-align: center;
 	}
 }
-
+.centered-small {
+	@media #{$small-down} {
+		text-align: center;
+	}
+}
 .width-100 {
 	width: 100% !important;
 }
@@ -316,7 +320,7 @@ ul {
 					&:hover {
 						color: $col-link;
 						span {
-							&::after {
+							&:after {
 								// Creates the burger icon
 								box-shadow: 0 0 0 1px $col-link,0 7px 0 1px $col-link,0 14px 0 1px $col-link;
 							}
@@ -830,15 +834,6 @@ FOR EXAMPLE, on the motul page create an area with
 	color: $col-light-grey-font;
 	margin-top: 1rem;
 	overflow: hidden;
-	.news-header {
-		@extend .grey3-bg;
-		margin-bottom: 0;
-		text-shadow: $shad-black;
-		color: $col-light-grey-font !important;
-		small {
-			vertical-align: middle;
-		}
-	}
 	.media-thumbnail {
 		border: 0px !important;
 		a {
@@ -853,6 +848,14 @@ FOR EXAMPLE, on the motul page create an area with
 		.media-title, .media-title p {
 			font-weight: bold;
 		}
+		.media-2-line, .media-2-line p {
+			max-height: 3.2rem;
+			overflow: hidden;
+		}
+		.media-date-views {
+			color: $col-grey-1;
+			line-height: 1rem;
+		}
 		p {
 			margin-bottom: 0;
 			line-height: inherit;
@@ -861,7 +864,7 @@ FOR EXAMPLE, on the motul page create an area with
 	.news-detail-heading, .news-detail-heading p {
 		@extend h3;
 	}
-	.news-body {
+	.media-body {
 		width: 100%;
 		padding: 1rem 0rem 1rem 0rem;
 		p>img {
@@ -991,39 +994,40 @@ FOR EXAMPLE, on the motul page create an area with
 
 .footer {
 	margin-top: 1rem;
+	padding: 2rem 0 1rem 0;
 }
 
 // Make listing in footer
-.make-listing-button {
-	a {
-		padding: rem-calc(8) rem-calc(16) rem-calc(10)!important;
-		text-align: center;
-		small {
-			@extend .footer;
-			@extend .pasred;
+//.make-listing-button {
+//	a {
+//		padding: rem-calc(8) rem-calc(16) rem-calc(10)!important;
+//		text-align: center;
+//		small {
+//			@extend .footer;
+//			@extend .pasred;
+//		}
+//	}
+//	#make-listing-panel {
+//		margin-bottom: rem-calc(8);
+ul.format_make_listing {
+	li {
+		display: inline-table;
+		@media #{$large-and-up} {
+			width: 25%;
 		}
-	}
-	#make-listing-panel {
-		margin-bottom: rem-calc(8);
-		ul.format_make_listing {
-			li {
-				display: inline-table;
-				@media #{$large-and-up} {
-					width: 25%;
-				}
-				@media #{$medium-only} {
-					width: 33%;
-				}
-				@media #{$small-only} {
-					width: 50%;
-				}
-				a {
-					font-size: rem-calc(10);
-				}
-			}
+		@media #{$medium-only} {
+			width: 33%;
+		}
+		@media #{$small-only} {
+			width: 50%;
+		}
+		a {
+			font-size: rem-calc(10);
 		}
 	}
 }
+//	}
+//}
 
 //SITEMAP
 table.cms_sitemap {
@@ -1187,6 +1191,10 @@ table.cms_sitemap {
 		.combination_option_label {
 			font-weight: bold!important;
 			min-width: 20%;
+			line-height: 2.25rem;
+			@media #{$medium-and-up} {
+				padding-bottom: 1rem!important;
+			}
 		}
 		.combination_option_field {
 			select {
