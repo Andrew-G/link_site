@@ -12,6 +12,7 @@ Link International is Australia's leading motorcycle parts importer and distribu
 		2. [Products drop down](#products-drop-down)
 		3. [Mobile Nav](#mobile-nav)
 		4. [Side bar](#side-bar)
+4. [Media](#media)
 
 
 
@@ -58,7 +59,7 @@ The Products Drop Down navigation is *only used on medium and up screens*, it is
 
 Open __*Global Products Drop Down.html*__
 
-Basic HTML for each brand option:
+Example HTML for each brand option:
 
 ```html
 <li><a href="BRAND-PAGE-URL"><img alt="" src="BRAND-LOGO-IMAGE"></a></li>
@@ -74,7 +75,7 @@ The changes made in the Global Product Drop Down area must also be made in the G
 
 Open __*Global Nav.html*__
 
-Basic HTML for Top Bar navigation:
+Example HTML for Top Bar navigation:
 
 ```<li><a href="BRAND-PAGE-URL">BRAND-NAME</a></li>```
 
@@ -86,7 +87,7 @@ Basic HTML for Top Bar navigation:
 
 __File:__ *Global Sidebar.html*
 
-Basic HTML for the side bar navigation, this example is using the **JT Sprockets** page:
+Example HTML for the side bar navigation, this example is using the **JT Sprockets** page:
 
 ```html
 <li class="heading jt-nav">JT Sprockets</li>
@@ -108,3 +109,19 @@ To get a specific side nav to appear on a page, add this code to the pages local
 	}
 </style>
 ```
+
+## Media
+
+### Thumbnails
+__Area:__ *Spare field*
+
+Example HTML for media thumbnails
+```<p><img src="IMAGE-URL"></p>```
+
+There must be _no_ inline styling in the thumbnail. Check the source code of the field before submitting for any inline styling that was automatically added.
+
+Example of HTML to delete
+```style="width:____px;height:____px;"```
+
+- The thumbnail images **must** be 16:9 ratio.
+- The best size for thumbnail images is **1008x567**.
