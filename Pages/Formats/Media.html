@@ -7,45 +7,25 @@
 
 <!-- LNK Media Details -->
 <div class="small-12 columns news-record news-border-box-overwrite">
-<!--
-	<div class="row">
-		<div class="small-6 columns centered" style="padding-right:0;">
-			<p class="news-header"><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small></p>
-		</div>
-		<div class="small-6 columns centered" style="padding-left:0;">
-			<p class="news-header"><i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
-		</div>
-	</div>
--->
 	<div class="media-thumbnail">
 		$spare1$
 		<span class="media-title news-detail-heading">$heading$</span>
-		<p><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small> &nbsp;<i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
+		<p class="media-date-views"><small>$users_view_count$ views &nbsp;&#8226;&nbsp; $arrival_date_formatted$</small></p>
 	</div>
-	<div class="news-body">
+	<div class="media-body">
 		<div class="addthis_native_toolbox"></div>
 		<br>
 		$body$
 	</div>
 </div>
 
-<!-- LNK Media Details No header -->
+<!-- LNK Media Details (no spare) -->
 <div class="small-12 columns news-record news-border-box-overwrite">
-<!--
-	<div class="row">
-		<div class="small-6 columns centered" style="padding-right:0;">
-			<p class="news-header"><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small></p>
-		</div>
-		<div class="small-6 columns centered" style="padding-left:0;">
-			<p class="news-header"><i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
-		</div>
-	</div>
--->
 	<div class="media-thumbnail">
 		<span class="media-title news-detail-heading">$heading$</span>
-		<p><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small> &nbsp;<i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
+		<p class="media-date-views"><small>$users_view_count$ views &nbsp;&#8226;&nbsp; $arrival_date_formatted$</small></p>
 	</div>
-	<div class="news-body">
+	<div class="media-body">
 		<div class="addthis_native_toolbox"></div>
 		<br>
 		$body$
@@ -63,19 +43,12 @@
 
 <!-- LNK Media Thumb (grid)-->
 <li class="news-record">
-	<div class="row">
-		<div class="small-6 columns centered" style="padding-right:0;">
-			<p class="news-header"><i class="fa fa-calendar"></i> <small>$arrival_date_formatted$</small></p>
-		</div>
-		<div class="small-6 columns centered" style="padding-left:0;">
-			<p class="news-header"><i class="fa fa-eye"></i> <small>$users_view_count$ views</small></p>
-		</div>
-	</div>
 	<div class="media-thumbnail">
 		<a href="$news_item_link$">
 			$spare1$
-			<span class="media-title">$heading$</span>
+			<span class="media-title media-2-line">$heading$</span>
 		</a>
+		<p class="media-date-views"><small>$users_view_count$ views &nbsp;&#8226;&nbsp; $arrival_date_formatted$</small></p>
 	</div>
 </li>
 
