@@ -39,14 +39,6 @@
 //   "foundation/components/offcanvas",
 //   "foundation/components/visibility";
 
-// Mixins
-//@mixin background-color($color) {
-//  -webkit-background-color: $color;
-//     -moz-background-color: $color;
-//      -ms-background-color: $color;
-//          background-color: $color;
-//}
-
 @mixin breakpoint($point) {
   @if $point == large {
     @media (min-width: rem-calc(1025)) { @content; }
