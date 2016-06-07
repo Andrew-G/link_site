@@ -8,7 +8,7 @@
 		<title>Dealer Locator</title>
 		<link rel="shortcut icon" href="http://www.linkint.com.au/libraries/resources/website-elements/favicon.ico">
 		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/app.css" />
+		<link rel="stylesheet" href="http://www.linkint.com.au/libraries/resources/CSS/app.css?07062016" />
 		
 		<style type="text/css">
 			#locationSelect li a {
@@ -45,17 +45,20 @@
 			<div class="contain-to-grid">
 				<div id="page-navigation">
 					<nav class="top-bar" data-topbar role="navigation">
+							<!-- LINK LOGO -->
 							<ul class="title-area">
 								<li class="name">
 									<a href="http://www.linkint.com.au"><img class="navbarlogo" src="http://www.linkint.com.au/libraries/images/website-elements/link-main-logo.png" /></a>
 								</li>
-								 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+								 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone without text -->
 								<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
 							</ul>
 
 							<section class="top-bar-section">
 								<ul class="right goodfont">
+									<!-- HOME BUTTON -->
 									<li><a href="http://www.linkint.com.au">Home</a></li>
+									<!-- ABOUT MENU -->
 									<li class="has-dropdown">
 										<a href="#">About</a>
 										<ul class="dropdown">
@@ -64,9 +67,10 @@
 											<li><a href="http://www.linkint.com.au/distribution-network.html">Distribution Network</a></li>
 											<li><a href="http://www.linkint.com.au/key-contacts.html">Key Contacts</a></li>
 											<li><a href="http://www.linkint.com.au/careers.html">Careers</a></li>
+											<li><a href="http://www.linkint.com.au/logo-downloads.html">Brand Logo Downloads</a></li>
 										</ul>
 									</li>
-									<!-- this is the products button for mobile size menu -->
+									<!-- [MOBILE] PRODUCTS MENU -->
 									<li class="show-for-small-only has-dropdown">
 										<a href="#">Products</a>
 										<ul class="dropdown">
@@ -93,11 +97,22 @@
 											<li><a href="http://www.linkint.com.au/vortex-racing-products.html">Vortex Racing</a></li>
 										</ul>
 									</li>
-									<!-- This is the products button for the desktop size grid drop down -->
+									<!-- PRODUCTS BUTTON FOR MEDIUM AND UP -->
 									<li class="show-for-medium-up"><a href="#" onclick="$('#products-drop-down').slideToggle();">Products</a></li>
-									<li><a href="http://www.linkint.com.au/news.html">Media</a></li>
+									<!-- MEDIA MENU -->
+									<li class="has-dropdown">
+										<a href="#">Media</a>
+										<ul class="dropdown">
+											<li><a href="http://www.linkint.com.au/news.html"><i class="fa fa-newspaper-o" aria-hidden="true"></i> &nbsp;News</a></li>
+											<li><a href="http://www.linkint.com.au/videos.html"><i class="fa fa-television" aria-hidden="true"></i> &nbsp;Videos</a></li>
+											<li><a href="http://www.linkint.com.au/images.html"><i class="fa fa-picture-o" aria-hidden="true"></i> &nbsp;Images</a></li>
+										</ul>
+									</li>
+									<!-- DEALERS BUTTON -->
 									<li><a href="http://database.linkint.com.au/dealer-locator.html">Dealers</a></li>
+									<!-- CONTACT BUTTON -->
 									<li><a href="http://www.linkint.com.au/contact-us.html">Contact</a></li>
+									<!-- [MOBILE] SOCIAL MEDIA MENU -->
 									<li class="show-for-small-only has-dropdown">
 										<a href="#">Social Media</a>
 										<ul class="dropdown">
@@ -110,7 +125,9 @@
 											<li><a href="https://www.youtube.com/user/LinkintAUS" target="_blank"><i class="fa fa-youtube-square"></i> &nbsp;YouTube - Link</a></li>
 										</ul>
 									</li>
+									<!-- WISHLIST BUTTON -->
 									<li><a href="http://www.linkint.com.au/wishlist.html">Wishlist</a></li>
+									<!-- LOGIN BUTTON -->
 									<li><a href="http://www.linkint.com.au/login.html">Login</a></li>
 								</ul>
 							</section>
@@ -155,13 +172,13 @@
 						<div class="small-12 medium-3 large-2 columns">
 							<h3 style="color:#FCFCFC;"><strong>Your</strong> Area</h3>
 						</div>
-						<div class="small-12 medium-4 large-5 columns">
+						<div class="small-12 medium-4 large-3 columns">
 								<input type="text" name="addressInput" id="addressInput" placeholder="Postcode / Suburb / City" onSubmit="searchLocations()">
 						</div>
-						<div class="small-8 medium-3 large-3 columns">
-							<h3 style="color:#FCFCFC;">Search Within</h3>
+						<div class="small-5 medium-2 large-2 columns">
+							<h3 style="color:#FCFCFC;">Within</h3>
 						</div>
-						<div class="small-4 medium-2 columns">
+						<div class="small-7 medium-3 large-2 columns">
 							<select name="radiusSelect" id="radiusSelect">
 								<option value="5">5 km's</option>
 								<option value="10">10 km's</option>
@@ -172,20 +189,8 @@
 								<option value="250">250 km's</option>
 							</select>
 						</div>
-					</div>
-
-					<div class="row">
-						<div class="small-6 large-2 columns">
-							<h3 style="color:#FCFCFC;">Stockist of</h3>
-						</div>
-						<div class="small-6 large-5 columns">
-							<select name="typeSelect" id="typeSelect">
-								<option value="all">All</option>
-								<option value="pirelli">Pirelli</option>
-							</select>
-						</div>
-						<div class="small-12 large-5 columns">
-							<button class="page-search-button width-100" onclick="searchLocations()">Find dealers</button>
+						<div class="small-12 medium-12 large-3 columns">
+							<button class="small radius page-search-button width-100" onclick="searchLocations()">Find dealers</button>
 						</div>
 					</div>
 				</div>
