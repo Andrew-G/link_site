@@ -13,7 +13,12 @@ Link International is Australia's leading motorcycle parts importer and distribu
 		3. [Mobile Nav](#mobile-nav)
 		4. [Side bar](#side-bar)
 4. [Media](#media)
-
+	1. [Thumbnails](#thumbnails)
+5. [Category Trees](#category-trees)
+	1. [Adding a category](#adding-a-category)
+	2. [Importing categories](#importing-categories)
+	3. [Adding products to a category](#adding-products-to-a-category)
+	4. [Importing Products to a category](#importing-products-to-a-category)
 
 
 
@@ -57,7 +62,7 @@ __Files:__ *Global Products Drop Down.html*, *Global Nav.html*
 The Products Drop Down navigation is *only used on medium and up screens*, it is not used for mobile devices. When editing the Products Drop Down area, the Global Nav area *must* also be edited for the mobile styles.
 
 
-Open __*Global Products Drop Down.html*__
+__Open:__ *Global Products Drop Down.html*
 
 Example HTML for each brand option:
 
@@ -73,11 +78,13 @@ The changes made in the Global Product Drop Down area must also be made in the G
 
 #### Mobile nav
 
-Open __*Global Nav.html*__
+__Open:__ *Global Nav.html*
 
 Example HTML for Top Bar navigation:
 
-```<li><a href="BRAND-PAGE-URL">BRAND-NAME</a></li>```
+```html
+<li><a href="BRAND-PAGE-URL">BRAND-NAME</a></li>
+```
 
 - To remove a brand, delete the corresponding list item.
 - To add a brand, add a list item using the HTML above, where ```BRAND-PAGE-URL``` is replaced with the URL of the brand page, and ```BRAND-NAME``` is replaced with the name of the brand.
@@ -94,17 +101,17 @@ Example HTML for the side bar navigation, this example is using the **JT Sprocke
 <li class="jt-nav"><a href="http://www.linkint.com.au/jt-sprockets.html">About</a></li>
 ``` 
 
-To add content to the side bar, add a list item with the class ```CLASSNAME-nav```, where ```CLASSNAME``` is replaced with an abbreviated name of the page that the side bar belongs to.
+To add content to the side bar, add a list item with the class ```BRAND-NAME-nav```, where ```BRAND-NAME``` is replaced with an abbreviated name of the brand that the side bar belongs to.
 
 Add the class ```heading``` to the list item that contains the heading.
 
 Make all changes to the side bar in the **_Global Product Side Nav.html_** file, then paste the entire HTML into the **_Global Product Side Nav_** global area.
 
-To get a specific side nav to appear on a page, add this code to the pages local side bar area, replacing ```CLASSNAME``` with the class of the side bar needed for that page.
+To get a specific side nav to appear on a page, add this code to the pages local side bar area, replacing ```BRAND-NAME``` with the same name used in the relevant list items.
 
 ```html
 <style type="text/css">
-	.CLASSNAME-nav {
+	.BRAND-NAME-nav {
 		display: list-item!important;
 	}
 </style>
@@ -116,12 +123,72 @@ To get a specific side nav to appear on a page, add this code to the pages local
 __Area:__ *Spare field*
 
 Example HTML for media thumbnails
-```<p><img src="IMAGE-URL"></p>```
+```
+<p><img src="IMAGE-URL"></p>
+```
 
-There must be _no_ inline styling in the thumbnail. Check the source code of the field before submitting for any inline styling that was automatically added.
+There must be *no* inline styling in the thumbnail. Check the source code of the field before submitting for any inline styling that was automatically added.
 
 Example of HTML to delete
-```style="width:____px;height:____px;"```
+```
+style="width:____px;height:____px;"
+```
 
 - The thumbnail images **must** be 16:9 ratio.
 - The best size for thumbnail images is **1008x567**.
+
+
+
+
+## Category Trees
+
+__Go to:__ *TOTECS Platform* > *Inventory* > *Category Trees*
+
+__Open:__ *Category Trees* > *Products* folder > *Brands* folder
+
+Inside the Brands folder will be folders for each individual brand.
+
+### Adding a category
+
+To add a category, right click the category folder you wish to add the category to and click *Add*
+- __Code:__ example-category
+- __Name:__ Example Category
+- __Description:__ example *(This will be changed later)*
+
+Right click the folder that was just created, *Example Category*, and click *Edit*
+
+The *Description 1* field contains the header for that category page, go into *source* mode and input the following HTML, replacing ```LOGO-URL``` with the relevant 800px wide logo from the *product-logos* library. The ```style``` is the same as in the [Side bar](#side-bar), replace ```BRAND-NAME``` with the name used in the relevant brands side bar.
+
+```html
+<div class="product-page-logo">
+	<hr class="show-for-small-only">
+	<img alt="" src="LOGO-URL" />
+</div>
+<style type="text/css">
+	.BRAND-NAME-nav {
+		display: list-item!important;
+	}
+</style>
+```
+
+The *Description 2* field can be used to add notes or information about the category.
+
+In the *Images* tab, choose the image you wish to be displayed as the categories thumbnail image.
+
+### Importing categories
+
+__Go to:__ *TOTECS Platform* > *Data* > *Data Imports*
+
+The most efficient way of adding multiple categories is to do a *Data Import*. Details of how to import categories can be found on the *Data Imports* page under the Import Type *Categories* Text File Format Details.
+
+It may still be neccessary to go through some of the steps in [Adding a category](#adding-a-category) once the categories have been imported, to 
+
+### Adding products to a category
+
+__Open:__ *Category Trees* > *Products* folder > *Brands* folder > *Navigate to the relevant category*
+
+In the *Child Products* tab, products can be manually added to the category by entering the product code and clicking *Add*.
+
+### Importing Products to a category
+
+The most efficient way of adding products to categories is to do a  *Data Import*. Details of how to import products can be found on the *Data Imports* page under the Import Type *Category Products* Text File Format Details.
