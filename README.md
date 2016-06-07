@@ -123,14 +123,16 @@ To get a specific side nav to appear on a page, add this code to the pages local
 __Area:__ *Spare field*
 
 Example HTML for media thumbnails
-```
+
+```html
 <p><img src="IMAGE-URL"></p>
 ```
 
 There must be *no* inline styling in the thumbnail. Check the source code of the field before submitting for any inline styling that was automatically added.
 
 Example of HTML to delete
-```
+
+```html
 style="width:____px;height:____px;"
 ```
 
@@ -150,7 +152,7 @@ Inside the Brands folder will be folders for each individual brand.
 
 ### Adding a category
 
-To add a category, right click the category folder you wish to add the category to and click *Add*
+To add a category, right click the folder you wish to add the category to and click *Add*
 - __Code:__ example-category
 - __Name:__ Example Category
 - __Description:__ example *(This will be changed later)*
@@ -190,5 +192,7 @@ __Open:__ *Category Trees* > *Products* folder > *Brands* folder > *Navigate to 
 In the *Child Products* tab, products can be manually added to the category by entering the product code and clicking *Add*.
 
 ### Importing Products to a category
+
+__Go to:__ *TOTECS Platform* > *Data* > *Data Imports*
 
 The most efficient way of adding products to categories is to do a  *Data Import*. Details of how to import products can be found on the *Data Imports* page under the Import Type *Category Products* Text File Format Details.
