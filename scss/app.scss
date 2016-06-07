@@ -169,6 +169,10 @@ $fon-size-normal: rem-calc(14);
 .width-100 {
 	width: 100% !important;
 }
+.width-50 {
+	width: 50% !important;
+}
+
 
 .large-50 {
 	@media #{$large-and-up} {
