@@ -183,7 +183,7 @@ __Go to:__ *TOTECS Platform* > *Data* > *Data Imports*
 
 The most efficient way of adding multiple categories is to do a *Data Import*. Details of how to import categories can be found on the *Data Imports* page under the Import Type *Categories* Text File Format Details.
 
-It may still be neccessary to go through some of the steps in [Adding a category](#adding-a-category) once the categories have been imported, to 
+It is important to ensure that the description field, in the CSV file to be imported, contains the correct HTML from the [Adding a category](#adding-a-category) section.
 
 ### Adding products to a category
 
