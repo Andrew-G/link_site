@@ -1,41 +1,47 @@
-<!-- OLD FB SHARE METHOD-->
-<script>
-	window.fbAsyncInit = function() {
-		FB.init({
-			appId      : '209152182767194',
-			xfbml      : true,
-			version    : 'v2.5'
-		});
-	};
-
-	(function(d, s, id){
-		var js, fjs = d.getElementsByTagName(s)[0];
-		if (d.getElementById(id)) {return;}
-		js = d.createElement(s); js.id = id;
-		js.src = "//connect.facebook.net/en_US/sdk.js";
-		fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));
-</script>
-
-<a href="" onclick="FB.ui({method: 'feed',link: window.location.href, caption: 'Product Review by ' + '$product_review_user_name1$'}, function(response){});return false;">Share <i class="fa fa-share"></i></a>
-<!-- OLD FB SHARE METHOD-->
-
-
-
 <!--Header-->
 <span class="prode-data-placeholder"><h4 class="prode-header">Customer Reviews &nbsp;<i class="fa fa-comments-o"></i></h4></span>
-Rating<br>
-$product_review_rating_average_image$ <span style="font-size:80%;color:#555555;">overall / $product_review_rating_total$ reviews</span>
+<strong>Overall Rating:</strong> $product_review_rating_average_image$ <span style="font-size:80%;color:#555555;">($product_review_rating_total$ reviews)</span>
 
 <!-- Record -->
 <div style="margin: 2rem 0 0 0;">
-	<span style="font-size:120%">$product_review_summary$</span>
+<!--	<span style="font-size:120%">$product_review_summary$</span>-->
 	<span style="display:none;" class="review-record-$product_review_rating$ review-check green"> &nbsp;<i class="fa fa-check"></i></span>
 	<span style="display:none;" class="review-record-$product_review_rating$ review-cross pasred"> &nbsp;<i class="fa fa-times"></i></span>
-	<div class="addthis_native_toolbox"></div>
-	$product_review_rating_image$ &nbsp;<span style="color:#555;">$product_review_date$ - $product_review_user_name1$ &nbsp;<i class="fa fa-user"></i></span><br>
-	<blockquote>$product_review_description$</blockquote>
+<!--	$product_review_rating_image$ &nbsp;<span style="color:#555;">$product_review_date$ - $product_review_user_name1$ &nbsp;<i class="fa fa-user"></i></span><br>-->
+	$product_review_rating_image$ &nbsp;<span style="color:#555;">$product_review_date$ by $product_review_user_name1$</span><br>
+	<blockquote>$product_review_description$ <div class="addthis_native_toolbox"></div></blockquote>
 </div>
+
+<!-- Record -->
+<div class="row product-review-record" style="margin: 2rem 0 0 0;border-top: 1px solid #ddd;" data-equalizer data-equalizer-mq="medium-up">
+	<div class="small-12 medium-4 large-3 columns" data-equalizer-watch>
+		<table>
+			<tr>
+				<td>
+					<span style="display:none;" class="review-record-$product_review_rating$ review-check green"><i class="fa fa-check"></i></span>
+					<span style="display:none;" class="review-record-$product_review_rating$ review-cross pasred"><i class="fa fa-times"></i></span>
+				</td>
+				<td class="width-100">$product_review_rating_image$</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-user"></i></td>
+				<td>$product_review_user_name1$</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-motorcycle" aria-hidden="true"></i></td>
+				<td>$product_review_summary$</td>
+			</tr>
+			<tr>
+				<td><i class="fa fa-calendar" aria-hidden="true"></i></td>
+				<td>$product_review_date$</td>
+			</tr>
+		</table>
+	</div>
+	<div class="small-12 medium-8 large-9 columns">
+		<blockquote data-equalizer-watch>$product_review_description$ <div class="addthis_native_toolbox" style="float: right;position: absolute;right: 0.75rem;bottom: 0.75rem;"></div></blockquote>
+	</div>
+</div>
+
 
 <!--Criterion Record-->
 <tr>
@@ -74,56 +80,3 @@ $product_review_rating_average_image$ <span style="font-size:80%;color:#555555;"
 		</form>
 	</div>
 </div>
-
-
-
-
-
-
-
-
-<!--FACEBOOK SDK-->
-<script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '209152182767194',
-      xfbml      : true,
-      version    : 'v2.5'
-    });
-  };
-
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
-
-
-
-
-<!--FB LIKE-->
-<div
-  class="fb-like"
-  data-share="true"
-  data-width="450"
-  data-show-faces="true">
-</div>
-
-
-<!--FEED DIALOG-->
-FB.ui({
-  method: 'feed',
-  link: window.location,
-  caption: $product_review_description$,
-}, function(response){});
-
-
-<!--URL REDIRECT-->
-https://www.facebook.com/dialog/feed?
-  app_id=145634995501895
-  &amp;display=popup&amp;caption=An%20example%20caption 
-  &amp;link=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2F
-  &amp;redirect_uri=https://developers.facebook.com/tools/explorer
