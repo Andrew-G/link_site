@@ -1,10 +1,11 @@
-$(document).foundation({
-	equalizer: {
-		equalize_on_stack: true
-	}
-});
-
 $(document).ready(function(){
+	
+	$(document).foundation({
+		equalizer: {
+			equalize_on_stack: true
+		}
+	});
+	
 	$('.slick-slider').slick({
 		autoplay: true,
 		autoplaySpeed: 4000,
