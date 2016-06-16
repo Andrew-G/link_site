@@ -1210,6 +1210,21 @@ table.cms_sitemap {
 	}
 }
 
+.product-review-record {
+	.columns {
+		padding-left: 0;
+	}
+	table {
+		background: none;
+		border: none;
+		tr td {
+			padding-bottom: 0;
+			padding-left: 0;
+		}
+	}
+}
+
+
 // The chicken schnitzel works burger is overkill.
 
 .fitment-loading {
